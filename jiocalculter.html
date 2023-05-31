@@ -1,0 +1,848 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Jio mart calculter - Jio Mart calculator - SkyflyTechnology</title>
+    <link rel="shortcut icon" type="image/x-icon" href="sky.jpg">
+    <meta name="description" content="Know more about the Jio mart calculator India with examples. Calculation of the tax .Indian Meesho calculator ,Jio Mart  calculator india,JioMart calculator">
+    <meta name="keywords" content="Indian JioMart calculator ,JioMart calculator india,JioMart calculator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="styleblogsr.css">
+    <link rel="stylesheet" href="styledig.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+
+    <!-- schema -->
+
+    <!-- Google Tag Manager -->
+
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TK8NCJ6');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://www.schema.org",
+            "@type": "Organization",
+            "name": "SkyflyTechnology",
+            "url": "https://www.digicommerce.in/",
+            "logo": "https://www.digicommerce.in/images/digicommerce-logo.jpg",
+            "image": "https://www.digicommerce.in/images/n2.webp",
+            "description": "Digicommerce provide the best Ecommerce Cataloging Service for Amazon, Flipkart, Snapdeal, Ebay, Paytm etc and Web development, Web designing, Online marketing services such as SEO, SMO and SEM to promote your business on a large scale.",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "A-5, Block A, Sector 4",
+                "addressLocality": "jaipur",
+                "addressRegion": "Rajasthan ",
+                "postalCode": "302033",
+                "addressCountry": "India"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "7300457196",
+                "contactType": "Phone nNo."
+            },
+            "sameAs": [
+                "https://www.facebook.com/Digicommerce.in/",
+                "https://twitter.com/CommerceDigi",
+                "https://www.linkedin.com/company/digicommerce-solutions/"
+            ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://www.schema.org",
+            "@type": "WebSite",
+            "name": "skyflytechnology",
+            "url": "https://www.digicommerce.in/",
+            "sameAs": [
+                "https://www.facebook.com/Digicommerce.in/",
+                "https://twitter.com/CommerceDigi",
+                "https://www.linkedin.com/company/digicommerce-solutions/"
+            ]
+        }
+    </script>
+
+    <!-- schema -->
+    <!--CSS-->
+    <link rel="stylesheet" href="https://www.digicommerce.in/css/bootstrap.css">
+    <link rel="stylesheet" href="https://www.digicommerce.in/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.digicommerce.in/css/font-awesome.css">
+    <link rel="stylesheet" href="https://www.digicommerce.in/css/styles.css">
+    <link rel="stylesheet" href="https://www.digicommerce.in/css/responsive.css">
+
+    <!--End of Tawk.to Script-->
+    <style>
+        .calc-box {
+            max-width: 50%;
+            margin: auto;
+            border: 1px solid #eee;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+            font-size: 16px;
+            line-height: 24px;
+            font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+            color: #555;
+        }
+        
+        .calc-per {
+            background-color: #e6e6ff;
+            color: BLACK;
+            border: 3px solid #7575a3;
+            border-radius: 20px 20px;
+            padding: 20px;
+        }
+        
+        .form-control {
+            margin-bottom: 20px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#gamount').keyup(function() {
+                var gamount = document.getElementById("gamount").value;
+                var gst = document.getElementById("gst").value;
+                var wgst = document.getElementById("wgst").value;
+
+                if ($('#gst').val() != '' && $('#gamount').val() != '') {
+
+                    if (wgst == 1) {
+                        var tamount = gamount * gst / 100;
+                        var famount = (parseFloat(gamount) + parseFloat(tamount));
+
+                        tamount = parseFloat(tamount).toFixed(2);
+                        famount = parseFloat(famount).toFixed(2);
+
+                        var rgamount = "Amount (Rs) : " + gamount;
+                        var rtamount = "GST(Rs) : " + tamount;
+                        var rgst = "Gst(%) : " + gst;
+                        var rfamount = "Result : " + famount;
+
+                        $('#ramount').text(rgamount);
+                        $('#tamount').text(rtamount);
+                        $('#rgst').text(rgst);
+                        $('#result').text(rfamount);
+
+                        document.getElementById("ramount").style.display = "block";
+                        document.getElementById("tamount").style.display = "block";
+                        document.getElementById("rgst").style.display = "block";
+                        document.getElementById("result").style.display = "block";
+
+                        document.getElementById("ramount1").style.display = "none";
+                        document.getElementById("tamount1").style.display = "none";
+                        document.getElementById("rgst1").style.display = "none";
+                        document.getElementById("result1").style.display = "none";
+
+                    } else {
+                        var pvalue = (parseFloat(100) + parseFloat(gst));
+                        var pamount = (parseFloat(gamount) * parseFloat(100));
+                        var tamount = pamount / pvalue;
+                        var famount = gamount - tamount;
+
+                        tamount = parseFloat(tamount).toFixed(2);
+                        famount = parseFloat(famount).toFixed(2);
+
+                        var rgamount = "Amount (Rs) : " + gamount;
+                        var rtamount = "GST(Rs) : " + tamount;
+                        var rgst = "Gst(%) : " + gst;
+                        var rfamount = "Result : " + famount;
+
+                        $('#ramount').text(rgamount);
+                        $('#tamount').text(rtamount);
+                        $('#rgst').text(rgst);
+                        $('#result').text(rfamount);
+
+                        document.getElementById("ramount").style.display = "block";
+                        document.getElementById("tamount").style.display = "block";
+                        document.getElementById("rgst").style.display = "block";
+                        document.getElementById("result").style.display = "block";
+
+                        document.getElementById("ramount1").style.display = "none";
+                        document.getElementById("tamount1").style.display = "none";
+                        document.getElementById("rgst1").style.display = "none";
+                        document.getElementById("result1").style.display = "none";
+                    }
+                }
+            });
+
+            $('#gst').keyup(function() {
+                var gamount = document.getElementById("gamount").value;
+                var gst = document.getElementById("gst").value;
+                var wgst = document.getElementById("wgst").value;
+
+                if (wgst == 1) {
+                    var tamount = gamount * gst / 100;
+                    var famount = (parseFloat(gamount) + parseFloat(tamount));
+
+                    tamount = parseFloat(tamount).toFixed(2);
+                    famount = parseFloat(famount).toFixed(2);
+
+                    var rgamount = "Amount (Rs) : " + gamount;
+                    var rtamount = "GST(Rs) : " + tamount;
+                    var rgst = "Gst(%) : " + gst;
+                    var rfamount = "Result : " + famount;
+
+                    $('#ramount').text(rgamount);
+                    $('#tamount').text(rtamount);
+                    $('#rgst').text(rgst);
+                    $('#result').text(rfamount);
+
+                    document.getElementById("ramount").style.display = "block";
+                    document.getElementById("tamount").style.display = "block";
+                    document.getElementById("rgst").style.display = "block";
+                    document.getElementById("result").style.display = "block";
+
+                    document.getElementById("ramount1").style.display = "none";
+                    document.getElementById("tamount1").style.display = "none";
+                    document.getElementById("rgst1").style.display = "none";
+                    document.getElementById("result1").style.display = "none";
+
+                } else {
+                    var pvalue = (parseFloat(100) + parseFloat(gst));
+                    var pamount = (parseFloat(gamount) * parseFloat(100));
+                    var tamount = pamount / pvalue;
+                    var famount = gamount - tamount;
+
+                    tamount = parseFloat(tamount).toFixed(2);
+                    famount = parseFloat(famount).toFixed(2);
+
+                    var rgamount = "Amount (Rs) : " + gamount;
+                    var rtamount = "GST(Rs) : " + tamount;
+                    var rgst = "Gst(%) : " + gst;
+                    var rfamount = "Result : " + famount;
+
+                    $('#ramount').text(rgamount);
+                    $('#tamount').text(rtamount);
+                    $('#rgst').text(rgst);
+                    $('#result').text(rfamount);
+
+                    document.getElementById("ramount").style.display = "block";
+                    document.getElementById("tamount").style.display = "block";
+                    document.getElementById("rgst").style.display = "block";
+                    document.getElementById("result").style.display = "block";
+
+                    document.getElementById("ramount1").style.display = "none";
+                    document.getElementById("tamount1").style.display = "none";
+                    document.getElementById("rgst1").style.display = "none";
+                    document.getElementById("result1").style.display = "none";
+                }
+
+            });
+        });
+    </script>
+    <script>
+        function calc() {
+            var gamount = document.getElementById("gamount").value;
+            var gst = document.getElementById("gst").value;
+            var wgst = document.getElementById("wgst").value;
+
+            if (wgst == 1) {
+                var tamount = gamount * gst / 100;
+                var famount = (parseFloat(gamount) + parseFloat(tamount));
+
+                tamount = parseFloat(tamount).toFixed(2);
+                famount = parseFloat(famount).toFixed(2);
+
+                $('#ramount').text(gamount);
+                $('#tamount').text(tamount);
+                $('#rgst').text(gst);
+                $('#result').text(famount);
+            } else {
+                var pvalue = (parseFloat(100) + parseFloat(gst));
+                var pamount = (parseFloat(gamount) * parseFloat(100));
+                var tamount = pamount / pvalue;
+                var famount = gamount - tamount;
+
+                tamount = parseFloat(tamount).toFixed(2);
+                famount = parseFloat(famount).toFixed(2);
+
+                $('#ramount').text(gamount);
+                $('#rgst').text(gst);
+                $('#tamount').text(famount);
+                $('#result').text(tamount);
+            }
+
+        }
+    </script>
+
+    <style type="text/css">
+    #f9gi4l9q2ul81684150965864 {
+            outline: none !important;
+            visibility: visible !important;
+            resize: none !important;
+            box-shadow: none !important;
+            overflow: visible !important;
+            background: none !important;
+            opacity: 1 !important;
+            filter: alpha(opacity=100) !important;
+            -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity 1
+        }
+        
+        ) !important;
+        -mz-opacity:1 !important;
+        -khtml-opacity:1 !important;
+        top:auto !important;
+        right:0px !important;
+        bottom:0px !important;
+        left:auto !important;
+        position:fixed !important;
+        border:0 !important;
+        min-height:0px !important;
+        min-width:0px !important;
+        max-height:none !important;
+        max-width:none !important;
+        padding:0px !important;
+        margin:0px !important;
+        -moz-transition-property:none !important;
+        -webkit-transition-property:none !important;
+        -o-transition-property:none !important;
+        transition-property:none !important;
+        transform:none !important;
+        -webkit-transform:none !important;
+        -ms-transform:none !important;
+        width:auto !important;
+        height:auto !important;
+        display:none !important;
+        z-index:2000000000 !important;
+        background-color:transparent !important;
+        cursor:none !important;
+        float:none !important;
+        border-radius:unset !important;
+        pointer-events:auto !important;
+        clip:auto !important;
+        color-scheme:light !important;
+    }
+    #f9gi4l9q2ul81684150965864.widget-hidden {
+        display: none !important;
+    }
+    #f9gi4l9q2ul81684150965864.widget-visible {
+        display: block !important;
+    }
+    @media print {
+        #f9gi4l9q2ul81684150965864.widget-visible {
+            display: none !important;
+        }
+    }
+    </style>
+    <style type="text/css">
+        @keyframes tawkMaxOpen {
+            0% {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+            to {
+                opacity: 1;
+                transform: translate(0, 0px);
+            }
+        }
+        
+        @-moz-keyframes tawkMaxOpen {
+            0% {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+            to {
+                opacity: 1;
+                transform: translate(0, 0px);
+            }
+        }
+        
+        @-webkit-keyframes tawkMaxOpen {
+            0% {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+            to {
+                opacity: 1;
+                transform: translate(0, 0px);
+            }
+        }
+        
+        #h3556sc1q3i1684150965888.open {
+            animation: tawkMaxOpen .25s ease!important;
+        }
+        
+        @keyframes tawkMaxClose {
+            from {
+                opacity: 1;
+                transform: translate(0, 0px);
+                ;
+            }
+            to {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+        }
+        
+        @-moz-keyframes tawkMaxClose {
+            from {
+                opacity: 1;
+                transform: translate(0, 0px);
+                ;
+            }
+            to {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+        }
+        
+        @-webkit-keyframes tawkMaxClose {
+            from {
+                opacity: 1;
+                transform: translate(0, 0px);
+                ;
+            }
+            to {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+        }
+        
+        #h3556sc1q3i1684150965888.closed {
+            animation: tawkMaxClose .25s ease!important
+        }
+    </style>
+    <script charset="utf-8" src="https://embed.tawk.to/_s/v4/app/642b759ae8c/js/twk-chunk-495e3f59.js"></script>
+    <script charset="utf-8" src="https://embed.tawk.to/_s/v4/app/642b759ae8c/js/twk-chunk-2d0b345a.js"></script>
+    <script src="https://cdn.jsdelivr.net/emojione/2.2.7/lib/js/emojione.min.js" type="text/javascript" async="" defer=""></script>
+    <script src="https://cdn.jsdelivr.net/emojione/2.2.7/lib/js/emojione.min.js" type="text/javascript" async="" defer=""></script>
+    <script src="https://cdn.jsdelivr.net/emojione/2.2.7/lib/js/emojione.min.js" type="text/javascript" async="" defer=""></script>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+        @media (min-device-width:320px) {
+            #header-top1 {
+                position: fixed;
+                width: 100%;
+                z-index: 1000;
+            }
+        }
+        
+        @media (min-width:768px) {
+            #header-top1 {
+                position: relative;
+            }
+        }
+    </style>
+
+    <!-- body google tags -->
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK8NCJ6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- body google tags -->
+
+
+
+
+
+
+    <div class="header-top" id="header-top1">
+        <div class="container">
+            <div class="row">
+                <div class="flagblock">
+                    <div class="tollfreeno">
+                        <span> <a href="mailto:services@skyflytechnology.com"> <img src="https://1000logos.net/wp-content/uploads/2018/05/Gmail-Logo.jpg" style="width:18px; height:18px;"> </a></span> &nbsp; &nbsp; | &nbsp; &nbsp;
+
+                        <span> <a href="https://wa.me/+917300457196?text=Hi"> <img src="https://1000logos.net/wp-content/uploads/2018/03/logo-wa.png" style="width:18px; height:18px;"> </a></span> &nbsp; &nbsp; | &nbsp; &nbsp;
+
+
+
+                    </div>
+                </div>
+
+                <div class="social">
+                    <input type="button" name="submit_start_selling_now" id="submit_start_selling_now" value="REQUEST A CALL" style="background-color:#ff8500; color:#FFFFFF; font-weight:bold; font-size:12px;" onclick="show()">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile_space">
+        <br>
+        <br>
+    </div>
+
+
+
+
+    <div class="mainnav">
+
+        <!-- css -->
+        <style type="text/css">
+            @media (min-device-width:320px) {
+                #logo {}
+                #menus {}
+                #mobile_header {}
+                #mobile_space {
+                    height: 145px;
+                }
+                #desktop_header {
+                    display: none;
+                }
+                #mobile_contact_us {
+                    display: block;
+                }
+                #banner_responsive {
+                    top: 0px;
+                    background: rgba(0, 0, 0, 0);
+                    height: 1385px;
+                }
+                #banner_iframe {
+                    top: 0px;
+                    height: 1385px;
+                }
+                #headers {
+                    position: fixed;
+                    right: 0px;
+                    left: 0px;
+                    top: 40px;
+                    padding: 0px;
+                    z-index: 1000;
+                    box-shadow: 10px 10px 5px #aaaaaa;
+                    /*border:solid;*/
+                    background-color: #FFFFFF;
+                }
+            }
+            
+            @media (min-width:768px) {
+                #mobile_space {
+                    display: none;
+                    box-shadow: 0 0 8px;
+                }
+                #logo {}
+                #menus {}
+                #headers {
+                    display: none;
+                }
+                #desktop_header {
+                    display: block;
+                }
+                #mobile_contact_us {
+                    display: none;
+                }
+                #banner_responsive {
+                    background: rgba(0, 0, 0, 0);
+                    height: 508px;
+                }
+                #banner_iframe {
+                    height: 508px;
+                }
+            }
+        </style>
+
+        <!-- css -->
+
+        <!-- mobile header -->
+
+
+        <!-- contact detail -->
+
+
+        <!-- mobile header -->
+
+
+
+        <div class="container" id="desktop_header">
+            <div class="row">
+                <div class="pull-left logo">
+                    <a class="scrollto" href="/">
+                        <img id="logo-image" class="logo-image" src="sky.jpg" width="20%" alt="SkyflyTechnology" title="SkyflyTechnology">
+                    </a>
+                    <a class="scrollto" href="/">
+                        <h2 class="vs-world">World's no.1 E-commerce service Agency</h2>
+                    </a>
+                    <span class="pull-right" style="margin-top:35px;"><i class="fa fa-phone"></i>Call Us(IN): <a href="tel:+91-7300457196"><strong>+91-730045716</strong></a></span>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div id="wrap">
+            <ul class="navbar">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">Account-management</a>
+                    <ul>
+                        <li>
+                            <a href="Flipkart.html">Flipkart Account-management</a>
+                        </li>
+                        <li>
+                            <a href="Meesho.html">Meesho Account-management</a>
+                        </li>
+                        <li>
+                            <a href="Ebay.html">Ebay Account-management</a>
+                        </li>
+                        <li>
+                            <a href="ETSYaACOUNT.HTML">Etsy Account-management</a>
+                        </li>
+                        <li>
+                            <a href="MntraAAcount.html">Myntra Account-management</a>
+                        </li>
+
+                        <li>
+                            <a href="NayakaAAcount.html">Nykaa Account-management</a>
+                        </li>
+
+
+                        <li>
+                            <a href="jioAccount.html">jiomart Account-management</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Service</a>
+                    <ul>
+                        <li>
+                            <a href="cataloge.html">Cataloging</a>
+                        </li>
+                        <li>
+                            <a href="wende.html">Web development</a>
+                        </li>
+                        <li>
+                            <a href="SEO.HTML">search-engine-optimization-seo</a>
+                        </li>
+                        <li>
+                            <a href="SMO.html">search-engine-Marketing -sem</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Calculater</a>
+                    <ul>
+                        <li>
+                            <a href="example.html">Profit Calculater</a>
+                        </li>
+                        <li>
+                            <a href="Amazoncalculter.html">Amazon Calculater</a>
+                        </li>
+                        <li>
+                            <a href="flifkart.html">Flipkart Calculater</a>
+                        </li>
+                        <li>
+                            <a href="Messhocalculter.html">Meesho Calculater</a>
+                        </li>
+                        <li>
+                            <a href="jiocalculter.html">JioMart Calculater</a>
+                        </li>
+                        <li>
+                            <a href="GST.html">Gst Calculter</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="blogs.html">BloGs</a></li>
+
+
+                <li>
+                    <a href="About.html">About</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="feadback.html">feedback</a>
+                </li>
+
+
+                </li>
+
+            </ul>
+        </div>
+        <center>
+            <div class="plcalculate">
+                <h1 style="color: green;">
+                    jio profit and loss calculter
+                </h1>
+                <h3>Profit and Loss Calculator</h3>
+                <p style="text-align: center;">Enter the Cost Price(CP) :
+                    <input class="cp" type="number" />
+                </p>
+                <p style="text-align: center;">Margin :
+                    <input class="cp" type="number" />
+                </p>
+                <p style="text-align: center;">Enter the Selling Price(SP) :
+                    <input class="sp" type="number" />
+                </p>
+                <button onclick="Calculate()">Calculate Profit/Loss</button>
+                <p>
+                    <h2 class="loss"></h2>
+                    <h2 class="lossPercentage"></h2>
+                    <h2 class="nothing"></h2>
+                </p>
+            </div>
+        </center>
+
+        <script>
+            function Calculate() {
+                const CP = document.querySelector(".cp").value;
+                const SP = document.querySelector(".sp").value;
+                const profitLoss = document.querySelector(".loss");
+                const percentage = document.querySelector(".lossPercentage");
+                const nothing = document.querySelector(".nothing");
+                profitLoss.innerHTML = "";
+                percentage.innerHTML = "";
+                nothing.innerHTML = "";
+                const diff = SP - CP;
+                if (diff > 0) {
+                    const profit_percent = ((diff / CP) * 100).toFixed(2);
+                    profitLoss.innerHTML = "It is a Profit of: INR " + diff;
+                    percentage.innerHTML = "Total Profit Percentage : " +
+                        profit_percent;
+                } else if (diff < 0) {
+                    const loss_percent = ((Math.abs(diff) / CP) * 100).toFixed(2);
+                    profitLoss.innerHTML = "It is a Loss of: INR " + Math.abs(diff);
+                    percentage.innerHTML = "Total Loss Percentage : " + loss_percent;
+                } else if (diff == 0) {
+                    nothing.innerHTML = "No Profit No Loss";
+                }
+            }
+        </script>
+
+        <center>
+            <h1> what is JioMart service </h1>
+            <p style="text-align: center;">JioMart is a versatile online shopping platform with an extensive selection of products <br>across multiple categories, including groceries, fashion and lifestyle, consumer electronics,<br> home and kitchen goods, general merchandise, and
+                handloom and handicrafts.</p>
+
+
+            <h1>What is the use of JioMart?</h1>
+
+            <p style="text-align: center;">JioMart - How Does it Work? JioMart is an online grocery store that provides 50,000+ grocery products at discounted rates at your doorstep through an express delivery system.<br> It follows an on-demand model. The company will avoid the system
+                of warehousing and partner with local<br> retailers instead.</p>
+
+
+            <br>
+            <br>
+        </center>
+
+
+        <img src="data:image/jpeg;base64,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"
+            width="30%">
+
+        <img src="https://images.indianexpress.com/2020/04/jiomart.jpg" width="32%" align="right">
+        <br>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-3">
+                        <div class="footertitle">Information</div>
+                        <ul class="quick-links">
+                            <li><a href="Abouts.html">About Us</a></li>
+                            <li><a href="privacy .html">Privacy Policy</a></li>
+                            <li><a href="term.html">Terms &amp; Conditions</a></li>
+
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+
+
+
+
+                    <div class="col-md-3 col-sm-3">
+                        <div class="footertitle">Customer Support</div>
+                        <span><a href="tel:7300457196"><i class="fa fa-phone"></i> Call Us(IN): <strong>+91-7300457196
+    </strong>, </a></span>
+                        <span><a href="mailto:services@skyflytechnology.com "><i class="fa fa-envelope"></i> Mail Us: services@skyflytechnology.com </a></span>
+                        <span><a href="#"><i class="fa fa-home"></i>  Shop No-43 Anand Prime,Haldighati Market ,Tonk Road , Sanganer,Jaipur  Rajasthan (302033)</a></span>
+                    </div>
+
+
+
+
+
+
+                    <div class="col-md-3 col-sm-3">
+                        <div class="footertitle">Stay in Touch!</div>
+                        <p style="padding: 0px;">Follow us on our social networks!</p>
+                        <ul class="social">
+                            <li class="facebook">
+                                <a href="https://www.facebook.com/profile.php?id=100086543303249&mibextid=ZbWKwL" target="_blank"> <i class="fa fa-facebook"></i> </a>
+                            </li>
+
+
+                            <li class="google-plus">
+                                <a href="https://instagram.com/skyflytechnology?igshid=MzRlODBiNWFlZA==" target="_blank"> <i class="fa fa-instagram"></i> </a>
+                            </li>
+
+                            <li class="linkedin">
+                                <a href="#" target="_blank"> <i class="fa fa-linkedin"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+
+                </div>
+        </footer>
+        </div>
+
+        <div id="qurhua0rl0ug1682778040491" class="widget-visible"><iframe src="about:blank" frameborder="0" scrolling="no" width="64px" height="60px" style="outline:none !important; visibility:visible !important; resize:none !important; box-shadow:none !important; overflow:visible !important; background:none !important; opacity:1 !important; filter:alpha(opacity=100) !important; -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity 1}) !important; -mz-opacity:1 !important; -khtml-opacity:1 !important; top:auto !important; right:20px !important; bottom:20px !important; left:auto !important; position:fixed !important; border:0 !important; min-height:60px !important; min-width:64px !important; max-height:60px !important; max-width:64px !important; padding:0 !important; margin:0 !important; -moz-transition-property:none !important; -webkit-transition-property:none !important; -o-transition-property:none !important; transition-property:none !important; transform:none !important; -webkit-transform:none !important; -ms-transform:none !important; width:64px !important; height:60px !important; display:block !important; z-index:1000001 !important; background-color:transparent !important; cursor:none !important; float:none !important; border-radius:unset !important; pointer-events:auto !important; clip:auto !important; color-scheme:light !important;"
+                id="t9bbqlsa5eeo1682778040531" class="" title="chat widget"></iframe><iframe src="about:blank" frameborder="0" scrolling="no" width="350px" height="368px" style="outline:none !important; visibility:visible !important; resize:none !important; box-shadow:none !important; overflow:visible !important; background:none !important; opacity:1 !important; filter:alpha(opacity=100) !important; -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity 1}) !important; -mz-opacity:1 !important; -khtml-opacity:1 !important; top:auto !important; right:10px !important; bottom:90px !important; left:auto !important; position:fixed !important; border:0 !important; min-height:368px !important; min-width:350px !important; max-height:368px !important; max-width:350px !important; padding:0 !important; margin:0 !important; -moz-transition-property:none !important; -webkit-transition-property:none !important; -o-transition-property:none !important; transition-property:none !important; transform:none !important; -webkit-transform:none !important; -ms-transform:none !important; width:350px !important; height:368px !important; display:none !important; z-index:auto !important; background-color:transparent !important; cursor:none !important; float:none !important; border-radius:5px !important; pointer-events:auto !important; clip:auto !important; color-scheme:light !important;"
+                id="gocf0urhv17g1682778040559" class="" title="chat widget"></iframe>
+            <div id="message-preview"></div>
+            <div id="chat-bubble"></div>
+        </div>
+        <script async="" charset="UTF-8" src="https://embed.tawk.to/_s/v4/app/642b759ae8c/languages/en.js"></script>
+
+
+        <a href="catebox.html">
+            <div class="chatbox-wrapper">
+                <div class="chatbox-toggle">
+                    <i class='bx bx-message-dots'></i>
+                </div>
+                <script src="app.js"></script>
+        </a>
+
+
+</body>
+
+</html>

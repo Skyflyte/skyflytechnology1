@@ -1,0 +1,851 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Messho calculter - Messho calculator - SkyflyTechnology</title>
+    <link rel="shortcut icon" type="image/x-icon" href="sky.jpg">
+    <meta name="description" content="Know more about the Meesho calculator India with examples. Calculation of the tax .Indian Meesho calculator ,Meesho calculator india,Meesho calculator">
+    <meta name="keywords" content="Indian Meesho calculator ,Ebay calculator india,Meesho calculator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="styleblogsr.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styledig.css">
+
+
+
+    <!-- schema -->
+
+    <!-- Google Tag Manager -->
+
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TK8NCJ6');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://www.schema.org",
+            "@type": "Organization",
+            "name": "SkyflyTechnology",
+            "url": "https://www.digicommerce.in/",
+            "logo": "https://www.digicommerce.in/images/digicommerce-logo.jpg",
+            "image": "https://www.digicommerce.in/images/n2.webp",
+            "description": "Digicommerce provide the best Ecommerce Cataloging Service for Amazon, Flipkart, Snapdeal, Ebay, Paytm etc and Web development, Web designing, Online marketing services such as SEO, SMO and SEM to promote your business on a large scale.",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "A-5, Block A, Sector 4",
+                "addressLocality": "Jaipur",
+                "addressRegion": "Rajasthan ",
+                "postalCode": "302003",
+                "addressCountry": "India"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "7300457196",
+                "contactType": "Phone nNo."
+            },
+            "sameAs": [
+                "https://www.facebook.com/Digicommerce.in/",
+                "https://twitter.com/CommerceDigi",
+                "https://www.linkedin.com/company/digicommerce-solutions/"
+            ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://www.schema.org",
+            "@type": "WebSite",
+            "name": "SkyflyTechnology",
+            "url": "https://www.digicommerce.in/",
+            "sameAs": [
+                "https://www.facebook.com/Digicommerce.in/",
+                "https://twitter.com/CommerceDigi",
+                "https://www.linkedin.com/company/digicommerce-solutions/"
+            ]
+        }
+    </script>
+
+    <!-- schema -->
+    <!--CSS-->
+    <link rel="stylesheet" href="https://www.digicommerce.in/css/bootstrap.css">
+    <link rel="stylesheet" href="https://www.digicommerce.in/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.digicommerce.in/css/font-awesome.css">
+    <link rel="stylesheet" href="https://www.digicommerce.in/css/styles.css">
+    <link rel="stylesheet" href="https://www.digicommerce.in/css/responsive.css">
+
+    <!--End of Tawk.to Script-->
+    <style>
+        .calc-box {
+            max-width: 50%;
+            margin: auto;
+            border: 1px solid #eee;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+            font-size: 16px;
+            line-height: 24px;
+            font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+            color: #555;
+        }
+        
+        .calc-per {
+            background-color: #e6e6ff;
+            color: BLACK;
+            border: 3px solid #7575a3;
+            border-radius: 20px 20px;
+            padding: 20px;
+        }
+        
+        .form-control {
+            margin-bottom: 20px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#gamount').keyup(function() {
+                var gamount = document.getElementById("gamount").value;
+                var gst = document.getElementById("gst").value;
+                var wgst = document.getElementById("wgst").value;
+
+                if ($('#gst').val() != '' && $('#gamount').val() != '') {
+
+                    if (wgst == 1) {
+                        var tamount = gamount * gst / 100;
+                        var famount = (parseFloat(gamount) + parseFloat(tamount));
+
+                        tamount = parseFloat(tamount).toFixed(2);
+                        famount = parseFloat(famount).toFixed(2);
+
+                        var rgamount = "Amount (Rs) : " + gamount;
+                        var rtamount = "GST(Rs) : " + tamount;
+                        var rgst = "Gst(%) : " + gst;
+                        var rfamount = "Result : " + famount;
+
+                        $('#ramount').text(rgamount);
+                        $('#tamount').text(rtamount);
+                        $('#rgst').text(rgst);
+                        $('#result').text(rfamount);
+
+                        document.getElementById("ramount").style.display = "block";
+                        document.getElementById("tamount").style.display = "block";
+                        document.getElementById("rgst").style.display = "block";
+                        document.getElementById("result").style.display = "block";
+
+                        document.getElementById("ramount1").style.display = "none";
+                        document.getElementById("tamount1").style.display = "none";
+                        document.getElementById("rgst1").style.display = "none";
+                        document.getElementById("result1").style.display = "none";
+
+                    } else {
+                        var pvalue = (parseFloat(100) + parseFloat(gst));
+                        var pamount = (parseFloat(gamount) * parseFloat(100));
+                        var tamount = pamount / pvalue;
+                        var famount = gamount - tamount;
+
+                        tamount = parseFloat(tamount).toFixed(2);
+                        famount = parseFloat(famount).toFixed(2);
+
+                        var rgamount = "Amount (Rs) : " + gamount;
+                        var rtamount = "GST(Rs) : " + tamount;
+                        var rgst = "Gst(%) : " + gst;
+                        var rfamount = "Result : " + famount;
+
+                        $('#ramount').text(rgamount);
+                        $('#tamount').text(rtamount);
+                        $('#rgst').text(rgst);
+                        $('#result').text(rfamount);
+
+                        document.getElementById("ramount").style.display = "block";
+                        document.getElementById("tamount").style.display = "block";
+                        document.getElementById("rgst").style.display = "block";
+                        document.getElementById("result").style.display = "block";
+
+                        document.getElementById("ramount1").style.display = "none";
+                        document.getElementById("tamount1").style.display = "none";
+                        document.getElementById("rgst1").style.display = "none";
+                        document.getElementById("result1").style.display = "none";
+                    }
+                }
+            });
+
+            $('#gst').keyup(function() {
+                var gamount = document.getElementById("gamount").value;
+                var gst = document.getElementById("gst").value;
+                var wgst = document.getElementById("wgst").value;
+
+                if (wgst == 1) {
+                    var tamount = gamount * gst / 100;
+                    var famount = (parseFloat(gamount) + parseFloat(tamount));
+
+                    tamount = parseFloat(tamount).toFixed(2);
+                    famount = parseFloat(famount).toFixed(2);
+
+                    var rgamount = "Amount (Rs) : " + gamount;
+                    var rtamount = "GST(Rs) : " + tamount;
+                    var rgst = "Gst(%) : " + gst;
+                    var rfamount = "Result : " + famount;
+
+                    $('#ramount').text(rgamount);
+                    $('#tamount').text(rtamount);
+                    $('#rgst').text(rgst);
+                    $('#result').text(rfamount);
+
+                    document.getElementById("ramount").style.display = "block";
+                    document.getElementById("tamount").style.display = "block";
+                    document.getElementById("rgst").style.display = "block";
+                    document.getElementById("result").style.display = "block";
+
+                    document.getElementById("ramount1").style.display = "none";
+                    document.getElementById("tamount1").style.display = "none";
+                    document.getElementById("rgst1").style.display = "none";
+                    document.getElementById("result1").style.display = "none";
+
+                } else {
+                    var pvalue = (parseFloat(100) + parseFloat(gst));
+                    var pamount = (parseFloat(gamount) * parseFloat(100));
+                    var tamount = pamount / pvalue;
+                    var famount = gamount - tamount;
+
+                    tamount = parseFloat(tamount).toFixed(2);
+                    famount = parseFloat(famount).toFixed(2);
+
+                    var rgamount = "Amount (Rs) : " + gamount;
+                    var rtamount = "GST(Rs) : " + tamount;
+                    var rgst = "Gst(%) : " + gst;
+                    var rfamount = "Result : " + famount;
+
+                    $('#ramount').text(rgamount);
+                    $('#tamount').text(rtamount);
+                    $('#rgst').text(rgst);
+                    $('#result').text(rfamount);
+
+                    document.getElementById("ramount").style.display = "block";
+                    document.getElementById("tamount").style.display = "block";
+                    document.getElementById("rgst").style.display = "block";
+                    document.getElementById("result").style.display = "block";
+
+                    document.getElementById("ramount1").style.display = "none";
+                    document.getElementById("tamount1").style.display = "none";
+                    document.getElementById("rgst1").style.display = "none";
+                    document.getElementById("result1").style.display = "none";
+                }
+
+            });
+        });
+    </script>
+    <script>
+        function calc() {
+            var gamount = document.getElementById("gamount").value;
+            var gst = document.getElementById("gst").value;
+            var wgst = document.getElementById("wgst").value;
+
+            if (wgst == 1) {
+                var tamount = gamount * gst / 100;
+                var famount = (parseFloat(gamount) + parseFloat(tamount));
+
+                tamount = parseFloat(tamount).toFixed(2);
+                famount = parseFloat(famount).toFixed(2);
+
+                $('#ramount').text(gamount);
+                $('#tamount').text(tamount);
+                $('#rgst').text(gst);
+                $('#result').text(famount);
+            } else {
+                var pvalue = (parseFloat(100) + parseFloat(gst));
+                var pamount = (parseFloat(gamount) * parseFloat(100));
+                var tamount = pamount / pvalue;
+                var famount = gamount - tamount;
+
+                tamount = parseFloat(tamount).toFixed(2);
+                famount = parseFloat(famount).toFixed(2);
+
+                $('#ramount').text(gamount);
+                $('#rgst').text(gst);
+                $('#tamount').text(famount);
+                $('#result').text(tamount);
+            }
+
+        }
+    </script>
+
+    <style type="text/css">
+    #f9gi4l9q2ul81684150965864 {
+            outline: none !important;
+            visibility: visible !important;
+            resize: none !important;
+            box-shadow: none !important;
+            overflow: visible !important;
+            background: none !important;
+            opacity: 1 !important;
+            filter: alpha(opacity=100) !important;
+            -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity 1
+        }
+        
+        ) !important;
+        -mz-opacity:1 !important;
+        -khtml-opacity:1 !important;
+        top:auto !important;
+        right:0px !important;
+        bottom:0px !important;
+        left:auto !important;
+        position:fixed !important;
+        border:0 !important;
+        min-height:0px !important;
+        min-width:0px !important;
+        max-height:none !important;
+        max-width:none !important;
+        padding:0px !important;
+        margin:0px !important;
+        -moz-transition-property:none !important;
+        -webkit-transition-property:none !important;
+        -o-transition-property:none !important;
+        transition-property:none !important;
+        transform:none !important;
+        -webkit-transform:none !important;
+        -ms-transform:none !important;
+        width:auto !important;
+        height:auto !important;
+        display:none !important;
+        z-index:2000000000 !important;
+        background-color:transparent !important;
+        cursor:none !important;
+        float:none !important;
+        border-radius:unset !important;
+        pointer-events:auto !important;
+        clip:auto !important;
+        color-scheme:light !important;
+    }
+    #f9gi4l9q2ul81684150965864.widget-hidden {
+        display: none !important;
+    }
+    #f9gi4l9q2ul81684150965864.widget-visible {
+        display: block !important;
+    }
+    @media print {
+        #f9gi4l9q2ul81684150965864.widget-visible {
+            display: none !important;
+        }
+    }
+    </style>
+    <style type="text/css">
+        @keyframes tawkMaxOpen {
+            0% {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+            to {
+                opacity: 1;
+                transform: translate(0, 0px);
+            }
+        }
+        
+        @-moz-keyframes tawkMaxOpen {
+            0% {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+            to {
+                opacity: 1;
+                transform: translate(0, 0px);
+            }
+        }
+        
+        @-webkit-keyframes tawkMaxOpen {
+            0% {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+            to {
+                opacity: 1;
+                transform: translate(0, 0px);
+            }
+        }
+        
+        #h3556sc1q3i1684150965888.open {
+            animation: tawkMaxOpen .25s ease!important;
+        }
+        
+        @keyframes tawkMaxClose {
+            from {
+                opacity: 1;
+                transform: translate(0, 0px);
+                ;
+            }
+            to {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+        }
+        
+        @-moz-keyframes tawkMaxClose {
+            from {
+                opacity: 1;
+                transform: translate(0, 0px);
+                ;
+            }
+            to {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+        }
+        
+        @-webkit-keyframes tawkMaxClose {
+            from {
+                opacity: 1;
+                transform: translate(0, 0px);
+                ;
+            }
+            to {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+        }
+        
+        #h3556sc1q3i1684150965888.closed {
+            animation: tawkMaxClose .25s ease!important
+        }
+    </style>
+    <script charset="utf-8" src="https://embed.tawk.to/_s/v4/app/642b759ae8c/js/twk-chunk-495e3f59.js"></script>
+    <script charset="utf-8" src="https://embed.tawk.to/_s/v4/app/642b759ae8c/js/twk-chunk-2d0b345a.js"></script>
+    <script src="https://cdn.jsdelivr.net/emojione/2.2.7/lib/js/emojione.min.js" type="text/javascript" async="" defer=""></script>
+    <script src="https://cdn.jsdelivr.net/emojione/2.2.7/lib/js/emojione.min.js" type="text/javascript" async="" defer=""></script>
+    <script src="https://cdn.jsdelivr.net/emojione/2.2.7/lib/js/emojione.min.js" type="text/javascript" async="" defer=""></script>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+        @media (min-device-width:320px) {
+            #header-top1 {
+                position: fixed;
+                width: 100%;
+                z-index: 1000;
+            }
+        }
+        
+        @media (min-width:768px) {
+            #header-top1 {
+                position: relative;
+            }
+        }
+    </style>
+
+    <!-- body google tags -->
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK8NCJ6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- body google tags -->
+
+
+
+
+
+
+    <div class="header-top" id="header-top1">
+        <div class="container">
+            <div class="row">
+                <div class="flagblock">
+                    <div class="tollfreeno">
+                        <span> <a href="mailto:services@skyflytechnology.com"> <img src="https://1000logos.net/wp-content/uploads/2018/05/Gmail-Logo.jpg" style="width:18px; height:18px;"> </a></span> &nbsp; &nbsp; | &nbsp; &nbsp;
+
+                        <span> <a href="https://wa.me/+917300457196?text=Hi"> <img src="https://1000logos.net/wp-content/uploads/2018/03/logo-wa.png" style="width:18px; height:18px;"> </a></span> &nbsp; &nbsp; | &nbsp; &nbsp;
+
+
+
+                    </div>
+                </div>
+
+                <div class="social">
+                    <input type="button" name="submit_start_selling_now" id="submit_start_selling_now" value="REQUEST A CALL" style="background-color:#ff8500; color:#FFFFFF; font-weight:bold; font-size:12px;" onclick="show()">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile_space">
+        <br>
+        <br>
+    </div>
+
+
+
+
+    <div class="mainnav">
+
+        <!-- css -->
+        <style type="text/css">
+            @media (min-device-width:320px) {
+                #logo {}
+                #menus {}
+                #mobile_header {}
+                #mobile_space {
+                    height: 145px;
+                }
+                #desktop_header {
+                    display: none;
+                }
+                #mobile_contact_us {
+                    display: block;
+                }
+                #banner_responsive {
+                    top: 0px;
+                    background: rgba(0, 0, 0, 0);
+                    height: 1385px;
+                }
+                #banner_iframe {
+                    top: 0px;
+                    height: 1385px;
+                }
+                #headers {
+                    position: fixed;
+                    right: 0px;
+                    left: 0px;
+                    top: 40px;
+                    padding: 0px;
+                    z-index: 1000;
+                    box-shadow: 10px 10px 5px #aaaaaa;
+                    /*border:solid;*/
+                    background-color: #FFFFFF;
+                }
+            }
+            
+            @media (min-width:768px) {
+                #mobile_space {
+                    display: none;
+                    box-shadow: 0 0 8px;
+                }
+                #logo {}
+                #menus {}
+                #headers {
+                    display: none;
+                }
+                #desktop_header {
+                    display: block;
+                }
+                #mobile_contact_us {
+                    display: none;
+                }
+                #banner_responsive {
+                    background: rgba(0, 0, 0, 0);
+                    height: 508px;
+                }
+                #banner_iframe {
+                    height: 508px;
+                }
+            }
+        </style>
+
+        <!-- css -->
+
+        <!-- mobile header -->
+
+
+        <!-- contact detail -->
+
+
+        <!-- mobile header -->
+
+
+
+        <div class="container" id="desktop_header">
+            <div class="row">
+                <div class="pull-left logo">
+                    <a class="scrollto" href="/">
+                        <img id="logo-image" class="logo-image" src="sky.jpg" width="20%" alt="SkyflyTechnology" title="SkyflyTechnology">
+                    </a>
+                    <a class="scrollto" href="/">
+                        <h2 class="vs-world">World's no.1 E-commerce service Agency</h2>
+                    </a>
+                    <span class="pull-right" style="margin-top:35px;"><i class="fa fa-phone"></i>Call Us(IN): <a href="tel:+91-7300457196"><strong>+91-730045716</strong></a></span>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div id="wrap">
+            <ul class="navbar">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">Account-management</a>
+                    <ul>
+                        <li>
+                            <a href="Flipkart.html">Flipkart Account-management</a>
+                        </li>
+                        <li>
+                            <a href="Meesho.html">Meesho Account-management</a>
+                        </li>
+                        <li>
+                            <a href="Ebay.html">Ebay Account-management</a>
+                        </li>
+                        <li>
+                            <a href="ETSYaACOUNT.HTML">Etsy Account-management</a>
+                        </li>
+                        <li>
+                            <a href="MntraAAcount.html">Myntra Account-management</a>
+                        </li>
+
+                        <li>
+                            <a href="NayakaAAcount.html">Nykaa Account-management</a>
+                        </li>
+
+                        <li>
+                            <a href="jioAccount.html">Jiomart Account-management</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Service</a>
+                    <ul>
+                        <li>
+                            <a href="cataloge.html">Cataloging</a>
+                        </li>
+                        <li>
+                            <a href="wende.html">Web development</a>
+                        </li>
+                        <li>
+                            <a href="SEO.HTML">search-engine-optimization-seo</a>
+                        </li>
+                        <li>
+                            <a href="SMO.html">search-engine-Marketing -sem</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Calculater</a>
+                    <ul>
+                        <li>
+                            <a href="example.html">Profit Calculater</a>
+                        </li>
+                        <li>
+                            <a href="Amazoncalculter.html">Amazon Calculater</a>
+                        </li>
+                        <li>
+                            <a href="flifkart.html">Flipkart Calculater</a>
+                        </li>
+                        <li>
+                            <a href="Messhocalculter.html">Meesho Calculater</a>
+                        </li>
+
+                        <li>
+                            <a href="GST.html">Gst Calculter</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="blogs.html">BloGs</a></li>
+
+
+                <li>
+                    <a href="About.html">About</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="feadback.html">feedback</a>
+                </li>
+
+
+                </li>
+
+            </ul>
+        </div>
+        <center>
+            <div class="plcalculate">
+                <h1 style="color: green;">
+                    Ebay profit and loss calculter
+                </h1>
+                <h3>Profit and Loss Calculator</h3>
+                <p style="text-align: center;">Enter the Cost Price(CP) :
+                    <input class="cp" type="number" />
+                </p>
+                <p style="text-align: center;">Enter the Selling Price(SP) :
+                    <input class="sp" type="number" />
+                </p>
+                <button onclick="Calculate()">Calculate Profit/Loss</button>
+                <p>
+                    <h2 class="loss"></h2>
+                    <h2 class="lossPercentage"></h2>
+                    <h2 class="nothing"></h2>
+                </p>
+            </div>
+        </center>
+
+        <script>
+            function Calculate() {
+                const CP = document.querySelector(".cp").value;
+                const SP = document.querySelector(".sp").value;
+                const profitLoss = document.querySelector(".loss");
+                const percentage = document.querySelector(".lossPercentage");
+                const nothing = document.querySelector(".nothing");
+                profitLoss.innerHTML = "";
+                percentage.innerHTML = "";
+                nothing.innerHTML = "";
+                const diff = SP - CP;
+                if (diff > 0) {
+                    const profit_percent = ((diff / CP) * 100).toFixed(2);
+                    profitLoss.innerHTML = "It is a Profit of: INR " + diff;
+                    percentage.innerHTML = "Total Profit Percentage : " +
+                        profit_percent;
+                } else if (diff < 0) {
+                    const loss_percent = ((Math.abs(diff) / CP) * 100).toFixed(2);
+                    profitLoss.innerHTML = "It is a Loss of: INR " + Math.abs(diff);
+                    percentage.innerHTML = "Total Loss Percentage : " + loss_percent;
+                } else if (diff == 0) {
+                    nothing.innerHTML = "No Profit No Loss";
+                }
+            }
+        </script>
+
+        <center>
+            <h1> what is Messho service </h1>
+            <p style="text-align: center;">Reselling with Meesho is a way of running your own business with zero investment. <br> As a Reseller, you share products listed on the Meesho app either with your network or<br> on social media and earn a profit with every sale. There are
+                1 Lakh+ products on the app through which you can browse.</p>
+
+
+            <h1>What is the purpose of Meesho?</h1>
+
+            <p style="text-align: center;">What is Meesho? Meesho is India's largest and most trusted marketplace for Resellers,<br> who sell products online through WhatsApp and Facebook<br>. Trusted by over 50,000 Resellers,<br> Meesho helps them grow their online business by providing,
+                Hit products at Lowest prices.</p>
+
+            <h1>What type of company is Meesho?</h1>
+
+            <p style="text-align:center">
+                Meesho is a social commerce platform that undertakes retail distribution, <br>enabling small retail merchants to connect and sell their products effectively via social media channels.<br> Bengaluru-based Meesho aims to create an<br> environment
+                where anyone can start their business with zero investment.
+            </p>
+            <br>
+            <br>
+        </center>
+
+
+        <img src="https://entrackr.com/storage/2020/03/Meesho-grocery.jpg" width="30%">
+
+        <img src="https://ecomsprint.com/wp-content/uploads/2021/12/All-about-Meesho-App-and-Meesho-Business-Model.png" width="25%" align="right">
+        <br>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-3 col-sm-3">
+                        <div class="footertitle">Information</div>
+                        <ul class="quick-links">
+                            <li><a href="Abouts.html">About Us</a></li>
+                            <li><a href="privacy .html">Privacy Policy</a></li>
+                            <li><a href="term.html">Terms &amp; Conditions</a></li>
+
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+
+
+
+
+                    <div class="col-md-3 col-sm-3">
+                        <div class="footertitle">Customer Support</div>
+                        <span><a href="tel:7300457196"><i class="fa fa-phone"></i> Call Us(IN): <strong>+91-7300457196
+    </strong>, </a></span>
+                        <span><a href="mailto:services@skyflytechnology.com "><i class="fa fa-envelope"></i> Mail Us: services@skyflytechnology.com </a></span>
+                        <span><a href="#"><i class="fa fa-home"></i> <address> Shop No-43 Anand Prime,Haldighati Market ,Tonk Road , Sanganer,Jaipur  Rajasthan (302033)</address></a></span>
+                    </div>
+
+
+
+
+
+
+                    <div class="col-md-3 col-sm-3">
+                        <div class="footertitle">Stay in Touch!</div>
+                        <p style="padding: 0px;">Follow us on our social networks!</p>
+                        <ul class="social">
+                            <li class="facebook">
+                                <a href="https://www.facebook.com/profile.php?id=100086543303249&mibextid=ZbWKwL" target="_blank"> <i class="fa fa-facebook"></i> </a>
+                            </li>
+
+
+                            <li class="google-plus">
+                                <a href="https://instagram.com/skyflytechnology?igshid=MzRlODBiNWFlZA==" target="_blank"> <i class="fa fa-instagram"></i> </a>
+                            </li>
+
+                            <li class="linkedin">
+                                <a href="https://www.linkedin.com/company/digicommerce-solutions" target="_blank"> <i class="fa fa-linkedin"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+
+                </div>
+        </footer>
+        </div>
+
+        <div id="qurhua0rl0ug1682778040491" class="widget-visible"><iframe src="about:blank" frameborder="0" scrolling="no" width="64px" height="60px" style="outline:none !important; visibility:visible !important; resize:none !important; box-shadow:none !important; overflow:visible !important; background:none !important; opacity:1 !important; filter:alpha(opacity=100) !important; -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity 1}) !important; -mz-opacity:1 !important; -khtml-opacity:1 !important; top:auto !important; right:20px !important; bottom:20px !important; left:auto !important; position:fixed !important; border:0 !important; min-height:60px !important; min-width:64px !important; max-height:60px !important; max-width:64px !important; padding:0 !important; margin:0 !important; -moz-transition-property:none !important; -webkit-transition-property:none !important; -o-transition-property:none !important; transition-property:none !important; transform:none !important; -webkit-transform:none !important; -ms-transform:none !important; width:64px !important; height:60px !important; display:block !important; z-index:1000001 !important; background-color:transparent !important; cursor:none !important; float:none !important; border-radius:unset !important; pointer-events:auto !important; clip:auto !important; color-scheme:light !important;"
+                id="t9bbqlsa5eeo1682778040531" class="" title="chat widget"></iframe><iframe src="about:blank" frameborder="0" scrolling="no" width="350px" height="368px" style="outline:none !important; visibility:visible !important; resize:none !important; box-shadow:none !important; overflow:visible !important; background:none !important; opacity:1 !important; filter:alpha(opacity=100) !important; -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity 1}) !important; -mz-opacity:1 !important; -khtml-opacity:1 !important; top:auto !important; right:10px !important; bottom:90px !important; left:auto !important; position:fixed !important; border:0 !important; min-height:368px !important; min-width:350px !important; max-height:368px !important; max-width:350px !important; padding:0 !important; margin:0 !important; -moz-transition-property:none !important; -webkit-transition-property:none !important; -o-transition-property:none !important; transition-property:none !important; transform:none !important; -webkit-transform:none !important; -ms-transform:none !important; width:350px !important; height:368px !important; display:none !important; z-index:auto !important; background-color:transparent !important; cursor:none !important; float:none !important; border-radius:5px !important; pointer-events:auto !important; clip:auto !important; color-scheme:light !important;"
+                id="gocf0urhv17g1682778040559" class="" title="chat widget"></iframe>
+            <div id="message-preview"></div>
+            <div id="chat-bubble"></div>
+        </div>
+        <script async="" charset="UTF-8" src="https://embed.tawk.to/_s/v4/app/642b759ae8c/languages/en.js"></script>
+
+
+
+        <a href="catebox.html">
+            <div class="chatbox-wrapper">
+                <div class="chatbox-toggle">
+                    <i class='bx bx-message-dots'></i>
+                </div>
+
+
+
+
+                <script src="app.js"></script>
+        </a>
+
+
+
+
+</body>
+
+</html>

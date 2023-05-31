@@ -1,0 +1,1667 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Flipkart Seller Price/Fee Calculator 2023 | Calculate Commission Fee and Profit</title>
+    <link rel="stylesheet" href="styleexam.css">
+    <link rel="shortcut icon" type="image/x-icon" href="sky.jpg">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styledig.css">
+    <link rel="stylesheet" href="styleblogsr.css">
+    <meta name="description" content="Use Flipkart price/fee calculator before selling products online. Calculate Flipkart Commission, Shipping, Collection, Fixed, GST and Marketplace fee so that you can get your profit and final fee value.
+    ">
+    <meta name="keywords" content="finance margin calculator,Margin calculator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- schema -->
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://www.schema.org",
+            "@type": "Organization",
+            "name": "skyflytechnology",
+            "url": "https://www.digicommerce.in/",
+            "logo": "https://www.digicommerce.in/images/digicommerce-logo.jpg",
+            "image": "https://www.digicommerce.in/images/n2.webp",
+            "description": "skyflytechnology provide the best Ecommerce Cataloging Service for Amazon, Flipkart, Snapdeal, Ebay, Paytm etc and Web development, Web designing, Online marketing services such as SEO, SMO and SEM to promote your business on a large scale.",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "A-5, Block A, Sector 4",
+                "addressLocality": "jaipur ",
+                "addressRegion": "Rajasthan ",
+                "postalCode": "302003",
+                "addressCountry": "India"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "7300457196",
+                "contactType": "Phone nNo."
+            },
+            "sameAs": [
+                "https://www.facebook.com/Digicommerce.in/",
+                "https://twitter.com/CommerceDigi",
+                "https://www.linkedin.com/company/digicommerce-solutions/"
+            ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://www.schema.org",
+            "@type": "WebSite",
+            "name": "skyflytechnology",
+            "url": "https://www.digicommerce.in/",
+            "sameAs": [
+                "https://www.facebook.com/Digicommerce.in/",
+                "https://twitter.com/CommerceDigi",
+                "https://www.linkedin.com/company/digicommerce-solutions/"
+            ]
+        }
+    </script>
+
+    <!-- schema -->
+    <!--CSS-->
+    <link rel="stylesheet" href="https://www.digicommerce.in/css/bootstrap.css">
+    <link rel="stylesheet" href="https://www.digicommerce.in/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.digicommerce.in/css/font-awesome.css">
+    <link rel="stylesheet" href="https://www.digicommerce.in/css/styles.css">
+    <link rel="stylesheet" href="https://www.digicommerce.in/css/responsive.css">
+    <!--Start of Tawk.to Script-->
+
+    <style>
+        .panel {
+            max-width: 60%;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #eee;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+            font-size: 16px;
+            line-height: 24px;
+            font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+            color: #555;
+            background-color: #e6e6ff;
+            color: BLACK;
+            border: 3px solid #7575a3;
+            border-radius: 20px 20px;
+        }
+        
+        td {
+            padding: 20px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#cost').keyup(function() {
+
+
+                if ($('#margin').val() != '' && $('#cost').val() != '') {
+
+                    var cost = document.getElementById("cost").value;
+                    var margin = document.getElementById("margin").value;
+
+                    var tamount = margin / 100;
+                    var totalsp = 1 - tamount;
+
+                    var famount = cost / totalsp;
+                    var samount = parseFloat(famount).toFixed(2);
+
+                    var pamount = (parseFloat(samount) - parseFloat(cost));
+                    var pamount = parseFloat(pamount).toFixed(2);
+
+                    var rsamount = "Revenue :" + samount;
+                    var rpamount = "Profit :" + pamount;
+
+                    $('#damount').text(rsamount);
+                    $('#result').text(rpamount);
+
+                    document.getElementById("damount").style.display = "block";
+                    document.getElementById("result").style.display = "block";
+
+                    document.getElementById("ddamount").style.display = "none";
+                    document.getElementById("dresult").style.display = "none";
+                }
+            });
+
+            $('#margin').keyup(function() {
+
+                if ($('#margin').val() != '' && $('#cost').val() != '') {
+
+                    var cost = document.getElementById("cost").value;
+                    var margin = document.getElementById("margin").value;
+
+                    var tamount = margin / 100;
+                    var totalsp = 1 - tamount;
+
+                    var famount = cost / totalsp;
+                    var samount = parseFloat(famount).toFixed(2);
+
+                    var pamount = (parseFloat(samount) - parseFloat(cost));
+                    var pamount = parseFloat(pamount).toFixed(2);
+
+                    var rsamount = "Revenue : " + samount;
+                    var rpamount = "Profit : " + pamount;
+
+                    $('#damount').text(rsamount);
+                    $('#result').text(rpamount);
+
+                    document.getElementById("damount").style.display = "block";
+                    document.getElementById("result").style.display = "block";
+
+                    document.getElementById("ddamount").style.display = "none";
+                    document.getElementById("dresult").style.display = "none";
+
+                }
+
+            });
+        });
+    </script>
+    <script>
+        function calc() {
+            var cost = document.getElementById("cost").value;
+            var margin = document.getElementById("margin").value;
+
+            if ($('#margin').val() != '' && $('#cost').val() != '') {
+
+                var cost = document.getElementById("cost").value;
+                var margin = document.getElementById("margin").value;
+
+                var tamount = margin / 100;
+                var totalsp = 1 - tamount;
+
+                var famount = cost / totalsp;
+                var samount = parseFloat(famount).toFixed(2);
+
+                var pamount = (parseFloat(samount) - parseFloat(cost));
+                var pamount = parseFloat(pamount).toFixed(2);
+
+                $('#damount').text(samount);
+                $('#result').text(pamount);
+            }
+        }
+    </script>
+    <meta http-equiv="origin-trial" content="A727AcAeLCei/ZogJHBlJUS63SxP6AeIROo7qXrkjrxkoxBu0eSSmypAHmGYwk4HjBMQp5nxCFODzfVnUIe31AQAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjg4MDgzMTk5LCJpc1RoaXJkUGFydHkiOnRydWV9">
+    <meta http-equiv="origin-trial" content="A727AcAeLCei/ZogJHBlJUS63SxP6AeIROo7qXrkjrxkoxBu0eSSmypAHmGYwk4HjBMQp5nxCFODzfVnUIe31AQAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjg4MDgzMTk5LCJpc1RoaXJkUGFydHkiOnRydWV9">
+    <script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/983105957/?random=1682593439111&amp;cv=11&amp;fst=1682593439111&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be34q0&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fwww.digicommerce.in%2Fflipkart-seller-fees-calculator%2F&amp;ref=https%3A%2F%2Fwww.digicommerce.in%2Fflipkart-seller-fees-calculator%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Flipkart%20Seller%20Price%2FFee%20Calculator%202023%20%7C%20Calculate%20Commission%20Fee%20and%20Profit&amp;auid=1721072736.1682246668&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B112.0.5615.138%7CGoogle%2520Chrome%3B112.0.5615.138%7CNot%253AA-Brand%3B99.0.0.0&amp;uamb=0&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
+    <script charset="utf-8" src="https://embed.tawk.to/_s/v4/app/642b759ae8c/js/twk-chunk-2c78ba82.js"></script>
+    <script charset="utf-8" src="https://embed.tawk.to/_s/v4/app/642b759ae8c/js/twk-chunk-696bc286.js"></script>
+    <script charset="utf-8" src="https://embed.tawk.to/_s/v4/app/642b759ae8c/js/twk-chunk-4fe9d5dd.js"></script>
+    <script charset="utf-8" src="https://embed.tawk.to/_s/v4/app/642b759ae8c/js/twk-chunk-2d0b9454.js"></script>
+    <script charset="utf-8" src="https://embed.tawk.to/_s/v4/app/642b759ae8c/js/twk-chunk-f163fcd0.js"></script>
+    <script charset="utf-8" src="https://embed.tawk.to/_s/v4/app/642b759ae8c/js/twk-chunk-32507910.js"></script>
+    <style type="text/css">
+    #ii0ie7uchkpg1682593449137 {
+            outline: none !important;
+            visibility: visible !important;
+            resize: none !important;
+            box-shadow: none !important;
+            overflow: visible !important;
+            background: none !important;
+            opacity: 1 !important;
+            filter: alpha(opacity=100) !important;
+            -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity 1)
+        }
+        
+        !important;
+        -mz-opacity:1 !important;
+        -khtml-opacity:1 !important;
+        top:auto !important;
+        right:0px !important;
+        bottom:0px !important;
+        left:auto !important;
+        position:fixed !important;
+        border:0 !important;
+        min-height:0px !important;
+        min-width:0px !important;
+        max-height:none !important;
+        max-width:none !important;
+        padding:0px !important;
+        margin:0px !important;
+        -moz-transition-property:none !important;
+        -webkit-transition-property:none !important;
+        -o-transition-property:none !important;
+        transition-property:none !important;
+        transform:none !important;
+        -webkit-transform:none !important;
+        -ms-transform:none !important;
+        width:auto !important;
+        height:auto !important;
+        display:none !important;
+        z-index:2000000000 !important;
+        background-color:transparent !important;
+        cursor:none !important;
+        float:none !important;
+        border-radius:unset !important;
+        pointer-events:auto !important;
+        clip:auto !important;
+        color-scheme:light !important;
+    }
+    #ii0ie7uchkpg1682593449137.widget-hidden {
+        display: none !important;
+    }
+    #ii0ie7uchkpg1682593449137.widget-visible {
+        display: block !important;
+    }
+    @media print {
+        #ii0ie7uchkpg1682593449137.widget-visible {
+            display: none !important;
+        }
+    }
+    </style>
+    <style type="text/css">
+        @keyframes tawkMaxOpen {
+            0% {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+            to {
+                opacity: 1;
+                transform: translate(0, 0px);
+            }
+        }
+        
+        @-moz-keyframes tawkMaxOpen {
+            0% {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+            to {
+                opacity: 1;
+                transform: translate(0, 0px);
+            }
+        }
+        
+        @-webkit-keyframes tawkMaxOpen {
+            0% {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+            to {
+                opacity: 1;
+                transform: translate(0, 0px);
+            }
+        }
+        
+        #v8p82spuuo1682593449303.open {
+            animation: tawkMaxOpen .25s ease!important;
+        }
+        
+        @keyframes tawkMaxClose {
+            from {
+                opacity: 1;
+                transform: translate(0, 0px);
+                ;
+            }
+            to {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+        }
+        
+        @-moz-keyframes tawkMaxClose {
+            from {
+                opacity: 1;
+                transform: translate(0, 0px);
+                ;
+            }
+            to {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+        }
+        
+        @-webkit-keyframes tawkMaxClose {
+            from {
+                opacity: 1;
+                transform: translate(0, 0px);
+                ;
+            }
+            to {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+        }
+        
+        #v8p82spuuo1682593449303.closed {
+            animation: tawkMaxClose .25s ease!important
+        }
+    </style>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+        @media (min-device-width:320px) {
+            #header-top1 {
+                position: fixed;
+                width: 100%;
+                z-index: 1000;
+            }
+        }
+        
+        @media (min-width:768px) {
+            #header-top1 {
+                position: relative;
+            }
+        }
+    </style>
+
+    <!-- body google tags -->
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK8NCJ6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- body google tags -->
+
+
+
+
+
+
+    <div class="header-top" id="header-top1">
+        <div class="container">
+            <div class="row">
+                <div class="flagblock">
+                    <div class="tollfreeno">
+                        <span> <a href="mailto:services@skyflytechnology.com"> <img src="https://cdn.pixabay.com/photo/2019/10/19/17/24/gmail-4561841_960_720.png" style="width:18px; height:18px;"> </a></span> &nbsp; &nbsp; | &nbsp; &nbsp;
+
+                        <span> <a href="https://wa.me/+917300457196?text=Hi"> <img src="https://cdn.pixabay.com/photo/2015/08/03/13/58/whatsapp-873316__340.png" style="width:18px; height:18px;"> </a></span> &nbsp; &nbsp; | &nbsp; &nbsp;
+
+
+
+                    </div>
+                </div>
+
+                <div class="social">
+                    <input type="button" name="submit_start_selling_now" id="submit_start_selling_now" value="REQUEST A CALL" style="background-color:#ff8500; color:#FFFFFF; font-weight:bold; font-size:12px;" onclick="show()">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile_space">
+        <br>
+        <br>
+    </div>
+
+
+
+
+    <div class="mainnav">
+
+        <!-- css -->
+        <style type="text/css">
+            @media (min-device-width:320px) {
+                #logo {}
+                #menus {}
+                #mobile_header {}
+                #mobile_space {
+                    height: 145px;
+                }
+                #desktop_header {
+                    display: none;
+                }
+                #mobile_contact_us {
+                    display: block;
+                }
+                #banner_responsive {
+                    top: 0px;
+                    background: rgba(0, 0, 0, 0);
+                    height: 1385px;
+                }
+                #banner_iframe {
+                    top: 0px;
+                    height: 1385px;
+                }
+                #headers {
+                    position: fixed;
+                    right: 0px;
+                    left: 0px;
+                    top: 40px;
+                    padding: 0px;
+                    z-index: 1000;
+                    box-shadow: 10px 10px 5px #aaaaaa;
+                    /*border:solid;*/
+                    background-color: #FFFFFF;
+                }
+            }
+            
+            @media (min-width:768px) {
+                #mobile_space {
+                    display: none;
+                    box-shadow: 0 0 8px;
+                }
+                #logo {}
+                #menus {}
+                #headers {
+                    display: none;
+                }
+                #desktop_header {
+                    display: block;
+                }
+                #mobile_contact_us {
+                    display: none;
+                }
+                #banner_responsive {
+                    background: rgba(0, 0, 0, 0);
+                    height: 508px;
+                }
+                #banner_iframe {
+                    height: 508px;
+                }
+            }
+        </style>
+
+        <!-- css -->
+
+
+        <!-- contact detail -->
+
+
+        <!-- mobile header -->
+        <div class="container" id="desktop_header">
+            <div class="row">
+                <div class="pull-left logo">
+                    <a class="scrollto" href="/">
+                        <img id="logo-image" width="25%" height="30%" class="logo-image" src="sky.jpg" alt="skyfly" title="skyfly">
+                    </a>
+                    <a class="scrollto" href="">
+                        <h2 style="color:#ff5555" class="vs-world">World's no.1 E-Commerce service Agency</h2>
+                    </a>
+                </div>
+                <div class="pull-right phone"> <i class="fa fa-phone"></i>Call Us(IN): <a href="tel:+91-8851516327"><strong>+91-7300457196</strong></a></div>
+            </div>
+        </div>
+
+
+
+        <div id="wrap">
+            <ul class="navbar">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">Account-management</a>
+                    <ul>
+                        <li>
+                            <a href="flifkart.html">Flipkart Account-management</a>
+                        </li>
+                        <li>
+                            <a href="Meesho.html">Meesho Account-management</a>
+                        </li>
+                        <li>
+                            <a href="Ebay.html">Ebay Account-management</a>
+                        </li>
+                        <li>
+                            <a href="ETSYaACOUNT.HTML">Etsy Account-management</a>
+                        </li>
+                        <li>
+                            <a href="MntraAAcount.html">Myntra Account-management</a>
+                        </li>
+                        <li>
+                            <a href="NayakaAAcount.html">Nykaa  Account-management</a>
+                        </li>
+
+                        <li>
+                            <a href="jioAccount.html">JioMart  Account-management</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Service</a>
+                    <ul>
+                        <li>
+                            <a href="cataloge.html">Cataloging</a>
+                        </li>
+                        <li>
+                            <a href="wende.html">Web development</a>
+                        </li>
+                        <li>
+                            <a href="SEO.HTML">search-engine-optimization-seo</a>
+                        </li>
+                        <li>
+                            <a href="SMO">search-engine-Marketing -sem</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Calculater</a>
+                    <ul>
+                        <li>
+                            <a href="example.html">Profit Calculater</a>
+                        </li>
+                        <li>
+                            <a href="AamazonAA.html">Amazon Calculater</a>
+                        </li>
+                        <li>
+                            <a href="Flipkart.html">Flipkart Calculater</a>
+                        </li>
+                        <li>
+                            <a href="Messhocalculter.html">Meesho Calculater</a>
+                        </li>
+                        <li>
+                            <a href="jiocalculter.html">JioMart Calculater</a>
+                        </li>
+                        <li>
+                            <a href="GST.html">Gst Calculter</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="blogs.html">BloGs</a>
+                </li>
+
+                <li>
+                    <a href="About.html">About</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="feadback.html">feadback</a>
+                </li>
+
+                </li>
+
+            </ul>
+        </div>
+
+
+
+
+
+
+
+        <style>
+            p {
+                line-height: 25px;
+                color: #000;
+            }
+            
+            h2 {
+                font-size: 25px;
+            }
+            
+            .container-block li {
+                margin-left: 20px;
+            }
+        </style>
+
+
+        <!-- Global site tag (gtag.js) - Google Ads: 983105957 -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-983105957"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'AW-983105957');
+        </script>
+        <script>
+            window.addEventListener('load', function() {
+                jQuery('body').on('submit', '[class="formdiv1"] form', function() {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-983105957/Amd3CMnZ4qMDEKWD5NQD'
+                    });
+                })
+                jQuery('body').on('click', '[href*="tel:"]', function() {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-983105957/sRWFCMPZ4qMDEKWD5NQD'
+                    });
+                })
+                jQuery('body').on('click', '[href*="mailto:"]', function() {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-983105957/syfACMbZ4qMDEKWD5NQD'
+                    });
+                })
+            });
+        </script>
+        <div class="container padding10" style="margin-top:30px;margin-bottom:50px;">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="https://www.digicommerce.in/">Home</a></li>
+                    <li class="breadcrumb-item" style="margin-left: 0px;"><a href="#">Calculator</a></li>
+                    <li class="breadcrumb-item" style="margin-left: 0px;"><a href="#">Tools</a></li>
+                    <li class="breadcrumb-item active" style="margin-left: 0px;">Finance Margin Calculator</li>
+                </ol>
+            </nav>
+            <!-- Page title -->
+            <div class="nile-page-title">
+                <div class="container">
+                    <h1>
+                        Flipkart Seller Calculator </h1>
+                    <div class="niletheme-breadcrumb">
+                    </div>
+                </div>
+            </div>
+            <!-- // Page title -->
+
+
+
+
+
+
+            <!-- page output -->
+            <div class="nile-blog-background">
+                <div class="container padding-bottom-60px padding-top-100px">
+                    <div class="row justify-content-center">
+
+                        <!--  content -->
+                        <div class="col-lg-8  margin-bottom-30px">
+                            <div class="post-layout">
+
+
+                                <article id="post-1155" class="post-1155 page type-page status-publish hentry">
+
+                                    <div class="entry-content clearfix">
+                                        <div class="post-entry clearfix">
+                                            <div class="nile-page-layout">
+
+
+                                                <div class="bialty-container">
+                                                    <div data-elementor-type="wp-page" data-elementor-id="1155" class="elementor elementor-1155">
+                                                        <section class="elementor-section elementor-top-section elementor-element elementor-element-2991fa5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2991fa5" data-element_type="section">
+                                                            <div class="elementor-container elementor-column-gap-default">
+                                                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d5ad0f1" data-id="d5ad0f1" data-element_type="column">
+                                                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                                                        <div class="elementor-element elementor-element-65bc233 elementor-widget elementor-widget-html" data-id="65bc233" data-element_type="widget" data-widget_type="html.default">
+                                                                            <div class="elementor-widget-container">
+
+
+
+
+                                                                                <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+                                                                                <!-- /Added by HTTrack -->
+
+                                                                                <meta name="msvalidate.01" content="1F4BD8030587A1CED64FC1A3214BF57B">
+                                                                                <meta charset="utf-8">
+                                                                                <title>Flipkart Seller Fees Calculator | Flipkart Price Calculator
+                                                                                </title>
+                                                                                <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+                                                                                <link rel="alternate" href="../index.html" hreflang="en-in">
+                                                                                <meta name="description" content="With the help of Flipkart Seller Fees Calculator, You can calculate commission fees very quickly in bulk and can know your transfer amount with more information at a single place.
+">
+                                                                                <meta name="keywords" content="Flipkart Seller Fees Calculato,Flipkart Seller Fees">
+                                                                                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+                                                                                <meta name="robots" content="index,follow">
+                                                                                <link rel="canonical" href="index.html">
+                                                                                <meta property="og:image" content="">
+                                                                                <meta property="og:title" content="Flipkart Seller Fees Calculator  |  Flipkart Price Calculator
+">
+                                                                                <meta property="og:url" content="index.html">
+                                                                                <meta property="og:description" content="With the help of Flipkart Seller Fees Calculator, You can calculate commission fees very quickly in bulk and can know your transfer amount with more information at a single place.
+">
+
+                                                                                <link rel="stylesheet" href="../css/bootstrap.css">
+                                                                                <link rel="stylesheet" href="../css/bootstrap.min.css">
+                                                                                <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                                                                                <link rel="stylesheet" href="../css/styles.css">
+                                                                                <link rel="stylesheet" href="../css/responsive.css">
+                                                                                <script type="application/ld+json">
+                                                                                    {
+                                                                                        ""
+                                                                                        @context "": ""
+                                                                                        http: //www.schema.org"",
+                                                                                            ""
+                                                                                        @type "": ""
+                                                                                        WebSite "",
+                                                                                            ""
+                                                                                        name "": ""
+                                                                                        Digi Commerce "",
+                                                                                            ""
+                                                                                        url "": ""
+                                                                                        https: //www.digicommerce.in/""
+                                                                                    }
+                                                                                </script>
+
+                                                                                <style>
+                                                                                    .cus_reviewh {
+                                                                                        font-weight: 900;
+                                                                                        font-style: italic;
+                                                                                    }
+                                                                                    
+                                                                                    .vs-th {
+                                                                                        text-align: center;
+                                                                                        padding: 2px 7px;
+                                                                                        background: #0065a0;
+                                                                                        color: #fff;
+                                                                                        height: 50px;
+                                                                                    }
+                                                                                    
+                                                                                    .vs-td-odd {
+                                                                                        padding: 9px 9px;
+                                                                                        background: #dddddd38;
+                                                                                    }
+                                                                                    
+                                                                                    .vs-td-even {
+                                                                                        padding: 9px 9px;
+                                                                                    }
+                                                                                    
+                                                                                    .vs-button {
+                                                                                        background: #0065a0;
+                                                                                        border: 0 none;
+                                                                                        clear: both;
+                                                                                        color: #fff;
+                                                                                        cursor: pointer;
+                                                                                        float: left;
+                                                                                        font-size: 18px;
+                                                                                        text-align: center;
+                                                                                        text-transform: capitalize;
+                                                                                        width: 100%;
+                                                                                        transition: all .3s ease-in-out;
+                                                                                    }
+                                                                                    
+                                                                                    .vs-border {
+                                                                                        border: 1px solid #ddd;
+                                                                                        width: 100%;
+                                                                                    }
+                                                                                    
+                                                                                    .vs-padding {
+                                                                                        padding-left: 5px;
+                                                                                        padding-right: 5px;
+                                                                                    }
+                                                                                    
+                                                                                    .vs-fontawesome-tick {
+                                                                                        font-size: 22px;
+                                                                                        color: green !important;
+                                                                                    }
+                                                                                    
+                                                                                    .container-block img {
+                                                                                        float: none !important;
+                                                                                    }
+                                                                                    
+                                                                                    .container-block span {
+                                                                                        font-size: 18px !important;
+                                                                                    }
+                                                                                    
+                                                                                    .container-block ol li {
+                                                                                        list-style: decimal;
+                                                                                        margin-left: 29px;
+                                                                                    }
+                                                                                    
+                                                                                    .container-block h3 {
+                                                                                        font-weight: normal;
+                                                                                        font-size: 18px;
+                                                                                        text-transform: none;
+                                                                                    }
+                                                                                    
+                                                                                    <script src="../js/jquery.min.js">
+                                                                                </style>
+
+
+
+                                                                                <script>
+                                                                                    window.dataLayer = window.dataLayer || [];
+
+                                                                                    function gtag() {
+                                                                                        dataLayer.push(arguments);
+                                                                                    }
+                                                                                    gtag('js', new Date());
+                                                                                    gtag('config', 'UA-53496105-11');
+                                                                                </script>
+                                                                                <style>
+                                                                                    p {
+                                                                                        margin: 10px 0px !important;
+                                                                                    }
+                                                                                    
+                                                                                    strong,
+                                                                                    b {
+                                                                                        font-weight: bold;
+                                                                                    }
+                                                                                    
+                                                                                    .vs-call {
+                                                                                        height: auto;
+                                                                                        max-width: 100%;
+                                                                                        vertical-align: middle;
+                                                                                        border: 0;
+                                                                                        margin: 0;
+                                                                                        padding: 0;
+                                                                                        outline: 0;
+                                                                                        -webkit-box-sizing: border-box;
+                                                                                        -moz-box-sizing: border-box;
+                                                                                        box-sizing: border-box;
+                                                                                        top: 1px;
+                                                                                        position: relative;
+                                                                                    }
+                                                                                </style>
+
+                                                                                <style>
+                                                                                    p {
+                                                                                        line-height: 25px;
+                                                                                        color: #000;
+                                                                                    }
+                                                                                    
+                                                                                    h2 {
+                                                                                        font-size: 25px;
+                                                                                    }
+                                                                                    
+                                                                                    .container-block li {
+                                                                                        margin-left: 20px;
+                                                                                    }
+                                                                                </style>
+                                                                                <!--//inner-banner-->
+                                                                                <style>
+                                                                                    .vs-call {
+                                                                                        top: 14px !important;
+                                                                                    }
+                                                                                </style>
+
+
+                                                                                <script type="text/javascript">
+                                                                                    function calc() {
+                                                                                        var cate = document.getElementById('cate').value;
+                                                                                        document.getElementById('pprice').style.display = 'block';
+
+                                                                                    }
+
+                                                                                    function calc1() {
+                                                                                        var cate = document.getElementById('cate').value;
+                                                                                        var price = document.getElementById('price').value;
+                                                                                        var price1 = (price * ((cate) / 100)).toFixed(2);
+                                                                                        document.getElementById('tref').innerHTML = price1;
+
+                                                                                        if ((price > 0) && (price < 501)) {
+                                                                                            document.getElementById('tclf').innerHTML = "5";
+                                                                                        } else if ((price > 500) && (price < 1001)) {
+                                                                                            document.getElementById('tclf').innerHTML = "15";
+                                                                                        } else if (price > 1000) {
+                                                                                            document.getElementById('tclf').innerHTML = "30";
+                                                                                        }
+                                                                                        document.getElementById('acal').style.display = 'block';
+
+                                                                                    }
+
+                                                                                    function total() {
+                                                                                        var stype = document.getElementById('stype').value;
+                                                                                        var pweight = document.getElementById('pweight').value;
+                                                                                        var sycf = document.getElementById('sycf').value;
+                                                                                        var price = document.getElementById('price').value;
+                                                                                        var shipm = document.getElementById('shipm').value;
+
+                                                                                        if (sycf == 1) {
+                                                                                            if ((price > 0) && (price < 750)) {
+                                                                                                var cfee = (price * (2) / (100));
+                                                                                            } else if (price > 749) {
+                                                                                                var cfee = (price * (2) / (100));
+                                                                                            }
+                                                                                        } else if (sycf == 2) {
+                                                                                            if ((price > 0) && (price < 750)) {
+                                                                                                var cfee = '15';
+                                                                                            } else if (price > 749) {
+                                                                                                var cfee = (price * (2) / (100));
+                                                                                            }
+                                                                                        }
+
+
+
+
+
+                                                                                        if (stype == 1) {
+
+
+                                                                                            if (pweight < 500) {
+                                                                                                if (shipm == '1') {
+                                                                                                    var asf = '30';
+                                                                                                } else if (shipm == '2') {
+                                                                                                    var asf = '45';
+                                                                                                } else if (shipm == '3') {
+                                                                                                    var asf = '65';
+                                                                                                }
+
+                                                                                            } else if ((pweight > 499) && (pweight < 3000)) {
+                                                                                                var aw = Math.floor(pweight / 500);
+                                                                                                if (shipm == '1') {
+                                                                                                    var asf = parseFloat('30') + (aw * 18);
+                                                                                                } else if (shipm == '2') {
+                                                                                                    var asf = parseFloat('45') + (aw * 23);
+                                                                                                } else if (shipm == '3') {
+                                                                                                    var asf = parseFloat('65') + (aw * 27);
+                                                                                                }
+
+                                                                                            } else if ((pweight > 2999) && (pweight < 12000)) {
+                                                                                                var aw = Math.floor(pweight / 1000);
+                                                                                                if (shipm == '1') {
+                                                                                                    var asf = parseFloat('30') + (aw * 8);
+                                                                                                } else if (shipm == '2') {
+                                                                                                    var asf = parseFloat('45') + (aw * 10);
+                                                                                                } else if (shipm == '3') {
+                                                                                                    var asf = parseFloat('65') + (aw * 15);
+                                                                                                }
+
+                                                                                            } else if (pweight > 11999) {
+                                                                                                var aw = Math.floor(pweight / 1000);
+                                                                                                if (shipm == '1') {
+                                                                                                    var asf = parseFloat('30') + (aw * 4);
+                                                                                                } else if (shipm == '2') {
+                                                                                                    var asf = parseFloat('45') + (aw * 5);
+                                                                                                } else if (shipm == '3') {
+                                                                                                    var asf = parseFloat('65') + (aw * 8);
+                                                                                                }
+
+                                                                                            }
+                                                                                        } else if (stype == 2) {
+
+
+
+                                                                                            if (pweight < 500) {
+                                                                                                if (shipm == '1') {
+                                                                                                    var asf = '27';
+                                                                                                } else if (shipm == '2') {
+                                                                                                    var asf = '40.5';
+                                                                                                } else if (shipm == '3') {
+                                                                                                    var asf = '58.5';
+                                                                                                }
+
+                                                                                            } else if ((pweight > 499) && (pweight < 3000)) {
+                                                                                                var aw = Math.floor(pweight / 500);
+                                                                                                if (shipm == '1') {
+                                                                                                    var asf = parseFloat('27') + (aw * 16.2);
+                                                                                                } else if (shipm == '2') {
+                                                                                                    var asf = parseFloat('40.5') + (aw * 20.7);
+                                                                                                } else if (shipm == '3') {
+                                                                                                    var asf = parseFloat('58.5') + (aw * 24.3);
+                                                                                                }
+
+                                                                                            } else if ((pweight > 2999) && (pweight < 12000)) {
+                                                                                                var aw = Math.floor(pweight / 1000);
+                                                                                                if (shipm == '1') {
+                                                                                                    var asf = parseFloat('27') + (aw * 7.2);
+                                                                                                } else if (shipm == '2') {
+                                                                                                    var asf = parseFloat('40.5') + (aw * 9);
+                                                                                                } else if (shipm == '3') {
+                                                                                                    var asf = parseFloat('58.5') + (aw * 13.5);
+                                                                                                }
+
+                                                                                            } else if (pweight > 11999) {
+                                                                                                var aw = Math.floor(pweight / 1000);
+                                                                                                if (shipm == '1') {
+                                                                                                    var asf = parseFloat('27') + (aw * 3.6);
+                                                                                                } else if (shipm == '2') {
+                                                                                                    var asf = parseFloat('40.5') + (aw * 4.5);
+                                                                                                } else if (shipm == '3') {
+                                                                                                    var asf = parseFloat('58.5') + (aw * 7.2);
+                                                                                                }
+
+                                                                                            }
+
+
+                                                                                        } else if (stype == 3) {
+
+                                                                                            if (document.getElementById('shipl').checked) {
+                                                                                                var shipm = '1';
+                                                                                            } else if (document.getElementById('shipr').checked) {
+                                                                                                var shipm = '2';
+                                                                                            } else if (document.getElementById('shipn').checked) {
+                                                                                                var shipm = '3';
+                                                                                            }
+
+                                                                                            if (pweight < 500) {
+                                                                                                if (shipm == '1') {
+                                                                                                    var asf = '24';
+                                                                                                } else if (shipm == '2') {
+                                                                                                    var asf = '36';
+                                                                                                } else if (shipm == '3') {
+                                                                                                    var asf = '52';
+                                                                                                }
+
+                                                                                            } else if ((pweight > 499) && (pweight < 3000)) {
+                                                                                                var aw = Math.floor(pweight / 500);
+                                                                                                if (shipm == '1') {
+                                                                                                    var asf = parseFloat('24') + (aw * 14.4);
+                                                                                                } else if (shipm == '2') {
+                                                                                                    var asf = parseFloat('36') + (aw * 18.4);
+                                                                                                } else if (shipm == '3') {
+                                                                                                    var asf = parseFloat('52') + (aw * 21.6);
+                                                                                                }
+
+                                                                                            } else if ((pweight > 2999) && (pweight < 12000)) {
+                                                                                                var aw = Math.floor(pweight / 1000);
+                                                                                                if (shipm == '1') {
+                                                                                                    var asf = parseFloat('24') + (aw * 6.4);
+                                                                                                } else if (shipm == '2') {
+                                                                                                    var asf = parseFloat('36') + (aw * 8);
+                                                                                                } else if (shipm == '3') {
+                                                                                                    var asf = parseFloat('52') + (aw * 12);
+                                                                                                }
+
+                                                                                            } else if (pweight > 11999) {
+                                                                                                var aw = Math.floor(pweight / 1000);
+                                                                                                if (shipm == '1') {
+                                                                                                    var asf = parseFloat('24') + (aw * 3.2);
+                                                                                                } else if (shipm == '2') {
+                                                                                                    var asf = parseFloat('36') + (aw * 4);
+                                                                                                } else if (shipm == '3') {
+                                                                                                    var asf = parseFloat('52') + (aw * 6.4);
+                                                                                                }
+
+                                                                                            }
+
+
+                                                                                        }
+                                                                                        document.getElementById('cfee').innerHTML = cfee;
+                                                                                        document.getElementById('asf').innerHTML = asf;
+                                                                                        var tref = document.getElementById('tref').innerHTML;
+                                                                                        var tclf = document.getElementById('tclf').innerHTML;
+                                                                                        var rcs = (parseFloat(tref) + parseFloat(tclf) + parseFloat(asf) + parseFloat(cfee)).toFixed(2);
+                                                                                        document.getElementById('rcs').innerHTML = rcs;
+                                                                                        var grcs = (rcs * (18 / 100)).toFixed(2);
+                                                                                        document.getElementById('grcs').innerHTML = grcs;
+                                                                                        var tchr = (parseFloat(rcs) + parseFloat(grcs)).toFixed(2);
+                                                                                        //var tchr = rcs + grcs;
+                                                                                        document.getElementById('tchr').innerHTML = tchr;
+                                                                                        var price = document.getElementById('price').value;
+                                                                                        var ym = (price - tchr).toFixed(2);
+                                                                                        document.getElementById('ym').innerHTML = ym;
+
+
+
+                                                                                        var pieChartContent = document.getElementById('pieChartContent');
+                                                                                        pieChartContent.innerHTML = '&nbsp;';
+                                                                                        $('#pieChartContent').append('<div class="vs-graph1"><h3 class="vs-graphh">  All Charges &amp; Fees <br><canvas id="myChart" width="300" height="300"><canvas>');
+
+
+                                                                                        ctx = $("#myChart").get(0).getContext("2d");
+                                                                                        var chart = new Chart(ctx, {
+                                                                                            // The type of chart we want to create
+                                                                                            type: 'bar',
+                                                                                            // The data for our dataset
+                                                                                            data: {
+                                                                                                labels: ["Commission", "Fixed Fees", "Collection Fees", "Shipping", "GST"],
+                                                                                                datasets: [{
+                                                                                                    label: "Flipkart Charges",
+                                                                                                    backgroundColor: ['rgb(255, 99, 132)', 'rgb(255, 99, 132)', 'rgb(255, 99, 132)', 'rgb(255, 99, 132)', 'rgb(255, 99, 132)'],
+                                                                                                    borderColor: 'rgb(255, 99, 132)',
+                                                                                                    data: [tref, tclf, cfee, asf, grcs],
+                                                                                                }]
+                                                                                            },
+
+                                                                                            // Configuration options go here
+                                                                                            options: {
+                                                                                                scales: {
+                                                                                                    yAxes: [{
+                                                                                                        ticks: {
+                                                                                                            beginAtZero: true,
+                                                                                                            callback: function(value, index, values) {
+                                                                                                                return "Rs." + value;
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }]
+                                                                                                },
+                                                                                                tooltips: {
+                                                                                                    callbacks: {
+                                                                                                        label: function(tooltipItem, data) {
+                                                                                                            return "Rs. " + Number(tooltipItem.yLabel).toFixed(0).replace(/./g, function(c, i, a) {
+                                                                                                                return i > 0 && c !== "." && (a.length - i) % 3 === 0 ? "," + c : c;
+                                                                                                            });
+                                                                                                        }
+                                                                                                    }
+                                                                                                },
+                                                                                                legend: {
+                                                                                                    display: false
+                                                                                                }
+                                                                                            }
+                                                                                        });
+
+
+
+                                                                                        var pieChart1Content = document.getElementById('pieChart1Content');
+                                                                                        pieChart1Content.innerHTML = '&nbsp;';
+                                                                                        $('#pieChart1Content').append('<div class="vs-graph1"><h3 class="vs-graphh">Spendings &amp; Earnings <br><canvas id="myChart1" width="300" height="300"><canvas>');
+
+
+                                                                                        ctx = $("#myChart1").get(0).getContext("2d");
+                                                                                        var chart = new Chart(ctx, {
+                                                                                            // The type of chart we want to create
+                                                                                            type: 'bar',
+                                                                                            // The data for our dataset
+                                                                                            data: {
+                                                                                                labels: ["Price", "Total Charges", "You Make"],
+                                                                                                datasets: [{
+                                                                                                    label: "",
+                                                                                                    backgroundColor: ['blue', 'red', 'green'],
+                                                                                                    borderColor: 'rgb(255, 99, 132)',
+                                                                                                    data: [price, tchr, ym],
+                                                                                                }]
+                                                                                            },
+
+                                                                                            // Configuration options go here
+                                                                                            options: {
+                                                                                                scales: {
+                                                                                                    yAxes: [{
+                                                                                                        ticks: {
+                                                                                                            beginAtZero: true,
+                                                                                                            callback: function(value, index, values) {
+                                                                                                                return "Rs." + value;
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }]
+                                                                                                },
+                                                                                                tooltips: {
+                                                                                                    callbacks: {
+                                                                                                        label: function(tooltipItem, data) {
+                                                                                                            return "Rs. " + Number(tooltipItem.yLabel).toFixed(0).replace(/./g, function(c, i, a) {
+                                                                                                                return i > 0 && c !== "." && (a.length - i) % 3 === 0 ? "," + c : c;
+                                                                                                            });
+                                                                                                        }
+                                                                                                    }
+                                                                                                },
+                                                                                                legend: {
+                                                                                                    display: false
+                                                                                                }
+                                                                                            }
+                                                                                        });
+
+
+                                                                                    }
+                                                                                </script>
+
+
+
+
+
+                                                                                <br><br>
+
+                                                                                <div class="vs-fkt1d">
+
+
+                                                                                    <div class="vs-fkt2d">
+                                                                                        <form method="post">
+                                                                                            <h1>Flipkart Seller Calculator</h1>
+                                                                                            <select class="as-form-control form-control" onchange="calc();calc1();total()" name="cate" id="cate">
+         <option selected="" disabled="">Select your Category</option>
+        
+ <option value="21">Artificial Silver Jewellery</option>
+        
+ <option value="10">Automation Robotics</option>
+        
+ <option value="5">Automotive</option>
+        
+ <option value="20">Automotive Accessories</option>
+        
+ <option value="6">Bath Care Diapering Potty</option>
+        
+ <option value="12">Bath Care Fragrances</option>
+        
+ <option value="5">Books &amp; Media</option>
+        
+ <option value="12">Camera &amp; Accessories</option>
+        
+ <option value="5">Chimneys Stoves</option>
+        
+ <option selected="" value="15">Clothing</option>
+        
+ <option value="20">Computer Laptop Accessories</option>
+        
+ <option value="12">Computer Laptop Components</option>
+        
+ <option value="2">Computer Tablet Peripheral</option>
+        
+ <option value="5">Digital Game</option>
+        
+ <option value="30">Digital Services</option>
+        
+ <option value="10">Eyewear &amp; Accessories</option>
+        
+ <option value="6">Face Body Cosmetics</option>
+        
+ <option value="6">Face Body Cosmetics</option>
+        
+ <option value="3">Food &amp; Nutrition</option>
+        
+ <option value="13">Footwear &amp; Accessories</option>
+        
+ <option value="12">Furniture</option>
+        
+ <option value="5.5">Health Beauty Devices</option>
+        
+ <option value="5">Home &amp; Kitchen</option>
+        
+ <option value="15">Home Decor</option>
+        
+ <option value="10">Home Furnishing</option>
+        
+ <option value="10">Home Improvement Tools</option>
+        
+ <option value="3">Household Supplies</option>
+        
+ <option value="10">Kitchen Tools</option>
+        
+ <option value="3">Luggage &amp; Travel</option>
+        
+ <option value="3">Mobile Phone Tablet</option>
+        
+ <option value="8">Musical Instruments</option>
+        
+ <option value="15">Pens &amp; Stationery</option>
+        
+ <option value="10">Pet Supplies</option>
+        
+ <option value="15">Posters</option>
+        
+ <option value="4">Precious Jewellery</option>
+        
+ <option value="2">Skin Care</option>
+        
+ <option value="10">Software</option>
+        
+ <option value="11">Sports &amp; Fitness</option>
+        
+ <option value="10">Toys</option>
+        
+ <option value="11">Wallet Card Wallet</option>
+        
+ <option value="15">Watches, Clocks &amp; Accessories</option>
+        
+ <option value="3.5">Water Purifier</option>
+        
+ <option value="15">Wearable Gadgets</option>
+                <optgroup label=""></optgroup>
+    </select>
+
+
+                                                                                            <div class="col-sm-12" style="display: block; margin-top: 10px; padding-left: 0px; font-size: 23px; margin-bottom: 10px;" id="pprice">
+                                                                                                <div class="col-sm-3">
+                                                                                                    <label>Price</label>
+                                                                                                </div>
+                                                                                                <div class="col-sm-9" style="padding-right: 0px;">
+                                                                                                    <i class="fa fa-inr"></i>
+                                                                                                    <input type="number" style="width: 93%;float: right;" value="999" class="form-control" onkeyup="calc1();total()" placeholder="Product Sell Price" id="price" name="pprice">
+                                                                                                </div>
+                                                                                            </div>
+
+
+                                                                                            <div id="acal" style="display: block;">
+
+
+                                                                                                <div class="col-sm-6" style="margin-bottom: 10px;">
+                                                                                                    <select class="form-control" id="sycf" onchange="total()">
+    <option value="">Select your collection Fee</option>
+     <option value="1">Prepaid</option>
+     <option selected="" value="2">Postpaid</option>
+</select>
+                                                                                                </div>
+
+                                                                                                <div class="col-sm-6">
+                                                                                                    <input type="number" class="form-control" min="0" onkeyup="total()" value="750" placeholder="Product Weight in gram" id="pweight" name="pweight" style="width:70%;float:left">                                                                                                    &nbsp;
+                                                                                                    <strong style="top: 9px;position: relative;"> gm</strong>
+                                                                                                </div>
+                                                                                                <div class="clearfix"></div>
+                                                                                                <div id="ship" class="col-sm-6">
+                                                                                                    <select class="form-control" id="shipm" onchange="total()">
+    <option value="">Select Shipping Region</option>
+    <option value="1">Local</option>
+     <option value="2">Regional</option>
+     <option selected="" value="3">National</option>
+</select>
+                                                                                                </div>
+
+                                                                                                <div class="col-sm-6">
+                                                                                                    <select class="form-control" id="stype" onchange="total()">
+    <option value="">Select Seller Type</option>
+    <option selected="" value="1">Bronze</option>
+    <option value="2">Silver</option>
+    <option value="3">Gold</option>
+</select>
+                                                                                                </div>
+
+                                                                                            </div>
+
+
+
+
+
+
+
+
+                                                                                        </form>
+
+                                                                                        <table class="table">
+
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <th>Commission Fees <span style="background:red;display:none;"><b id="ref"></b> %</span></th>
+                                                                                                    <td> Rs.<b id="tref">89.90</b></td>
+                                                                                                </tr>
+
+                                                                                                <tr>
+                                                                                                    <th>Fixed Fees</th>
+                                                                                                    <td>Rs.<b id="tclf">15</b></td>
+                                                                                                </tr>
+
+                                                                                                <tr id="papprice">
+                                                                                                    <th>Collection Fees</th>
+                                                                                                    <td>Rs.<b id="cfee">17.98</b></td>
+                                                                                                </tr>
+
+                                                                                                <tr>
+                                                                                                    <th>Flipkart Shipping Fees</th>
+                                                                                                    <td>Rs.<b id="asf">92</b></td>
+                                                                                                </tr>
+
+                                                                                                <tr>
+                                                                                                    <th>Commission+Fixed+Collection+Shipping Fees</th>
+                                                                                                    <td>Rs.<b id="rcs">214.88</b></td>
+                                                                                                </tr>
+
+                                                                                                <tr>
+                                                                                                    <th>GST on Commission+Fixed+Collection+Shipping Fees</th>
+                                                                                                    <td>Rs.<b id="grcs">38.68</b></td>
+                                                                                                </tr>
+
+                                                                                                <tr>
+                                                                                                    <th>Total Flipkart Charges</th>
+                                                                                                    <td>Rs.<b id="tchr">253.56</b></td>
+                                                                                                </tr>
+
+                                                                                                <tr>
+                                                                                                    <th>You Make</th>
+                                                                                                    <td>Rs.<b id="ym">645.44</b></td>
+                                                                                                </tr>
+
+
+
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+
+                                                                                </div>
+
+
+                                                                                <style type="text/css">
+                                                                                    .pull {
+                                                                                        left: 0px !important;
+                                                                                        -webkit-animation: mymove 2s;
+                                                                                        /* Safari 4.0 - 8.0 */
+                                                                                        animation: mymove 2s;
+                                                                                        -webkit-animation-timing-function: linear;
+                                                                                        animation-timing-function: linear;
+                                                                                    }
+                                                                                    /* Safari 4.0 - 8.0 */
+                                                                                    
+                                                                                    @-webkit-keyframes mymove {
+                                                                                        to {
+                                                                                            left: 0px;
+                                                                                        }
+                                                                                        from {
+                                                                                            left: -360px;
+                                                                                        }
+                                                                                    }
+                                                                                    /* Standard syntax */
+                                                                                    
+                                                                                    @keyframes mymove {
+                                                                                        to {
+                                                                                            left: 0px;
+                                                                                        }
+                                                                                        from {
+                                                                                            left: -360px;
+                                                                                        }
+                                                                                    }
+                                                                                </style>
+                                                                                <link rel="stylesheet" type="text/css" href="../stylevs6.css">
+                                                                                <div id="feedback" class="">
+                                                                                </div>
+                                                                                <script type="text/javascript">
+                                                                                    function myff() {
+                                                                                        document.getElementById('feedback').classList.toggle("pull");
+                                                                                    }
+                                                                                </script>
+                                                                                <link rel="stylesheet" href="../style.css" type="text/css" media="all">
+                                                                                <script src="../script.js"></script>
+                                                                                <script src="../js/jquery.min.js"></script>
+                                                                                <!-- Javascript -->
+                                                                                <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+                                                                                <script type="text/javascript" src="../js/menu.js"></script>
+                                                                                <script type="text/javascript" src="../js/parallax.js"></script>
+                                                                                <script type="text/javascript" src="../js/jquery.aw-showcase.js"></script>
+                                                                                <!--active class-->
+                                                                                <script>
+                                                                                    function myFunction() {
+                                                                                        var x = document.getElementById('contactinfo');
+                                                                                        if (x.style.display === 'none') {
+                                                                                            x.style.display = 'block';
+                                                                                        } else if (x.style.display === 'block') {
+                                                                                            x.style.display = 'none';
+                                                                                        } else {
+                                                                                            x.style.display = 'block';
+                                                                                        }
+                                                                                    }
+                                                                                </script>
+                                                                                <!--menu fixed on scroll-->
+                                                                                <script type="text/javascript">
+                                                                                    $(window).scroll(function() {
+                                                                                        var scroll = $(window).scrollTop();
+                                                                                        if (scroll <= 500) {
+                                                                                            $(".header-bottom").addClass("fixed");
+                                                                                        }
+                                                                                        if (scroll <= 0) {
+                                                                                            $(".header-bottom").removeClass("fixed");
+                                                                                        }
+                                                                                    });
+                                                                                </script>
+                                                                                <!--Success Stories slider-->
+                                                                                <script type="text/javascript">
+                                                                                    $(document).ready(function() {
+                                                                                        $("#showcase").awShowcase({
+                                                                                            content_width: 1366,
+                                                                                            content_height: 370,
+                                                                                            fit_to_parent: false,
+                                                                                            auto: true,
+                                                                                            interval: 3000,
+                                                                                            continuous: true,
+                                                                                            loading: true,
+                                                                                            tooltip_width: 200,
+                                                                                            tooltip_icon_width: 32,
+                                                                                            tooltip_icon_height: 32,
+                                                                                            tooltip_offsetx: 18,
+                                                                                            tooltip_offsety: 0,
+                                                                                            arrows: true,
+                                                                                            buttons: true,
+                                                                                            btn_numbers: true,
+                                                                                            keybord_keys: true,
+                                                                                            mousetrace: false,
+                                                                                            /* Trace x and y coordinates for the mouse */
+                                                                                            pauseonover: true,
+                                                                                            stoponclick: false,
+                                                                                            transition: 'hslide',
+                                                                                            /* hslide/vslide/fade */
+                                                                                            transition_delay: 0,
+                                                                                            transition_speed: 500,
+                                                                                            show_caption: 'onload',
+                                                                                            /* onload/onhover/show */
+                                                                                            thumbnails: false,
+                                                                                            thumbnails_position: 'outside-last',
+                                                                                            /* outside-last/outside-first/inside-last/inside-first */
+                                                                                            thumbnails_direction: 'vertical',
+                                                                                            /* vertical/horizontal */
+                                                                                            thumbnails_slidex: 1,
+                                                                                            /* 0 = auto / 1 = slide one thumbnail / 2 = slide two thumbnails / etc. */
+                                                                                            dynamic_height: false,
+                                                                                            /* For dynamic height to work in webkit you need to set the width and height of images in the source. Usually works to only set 
+
+the dimension of the first slide in the showcase. */
+                                                                                            speed_change: true,
+                                                                                            /* Set to true to prevent users from swithing more then one slide at once. */
+                                                                                            viewline: false,
+                                                                                            /* If set to true content_width, thumbnails, transition and dynamic_height will be disabled. As for dynamic height you 
+
+need to set the width and height of images in the source. */
+                                                                                            custom_function: null /* Define a custom function that runs on content change */
+                                                                                        });
+                                                                                    });
+                                                                                </script>
+                                                                                <script>
+                                                                                    calc();
+                                                                                    calc1();
+                                                                                    total();
+                                                                                </script>
+
+
+
+
+
+
+
+
+
+
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- .entry-content -->
+                                </article>
+                                <!-- #post-1155 -->
+                            </div>
+                        </div>
+                        <!-- //  content -->
+
+
+                        <div class="col-lg-4">
+                            <div id="nile-blog-sidebar" class="nile-blog-sidebar">
+
+                                <div id="recent-posts-2" class="nile-widget layout-1 widget_recent_entries">
+                                    <div class="widget-title"><span>Recent Posts</span></div>
+                                    <ul>
+                                        <li>
+                                            <a href="AamazonAA.html">Amazon Account Management Services </a>
+                                        </li>
+                                        <li>
+                                            <a href="flifkart.html">Flipkart Account Management Services </a>
+                                        </li>
+                                        <li>
+                                            <a href="Meesho.html">Meesho Account Management Services </a>
+                                        </li>
+                                        <li>
+                                            <a href="NayakaAAcount.html">Nykaa Account Management Services </a>
+                                        </li>
+                                        <li>
+                                            <a href="MntraAAcount.html"> Myntra  Account Management Services </a>
+                                        </li>
+                                        <li>
+                                            <a href="jioAccount.html"> JioMart Account Management Services </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+
+                                <div id="block-10" class="nile-widget layout-1 widget_block">
+                                    <h2 class="wp-block-heading"></h2>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <footer style="background-color: black;">
+                <div class="container">
+                    <div class="row">
+
+
+
+
+
+
+
+
+                        <div class="col-md-3 col-sm-3">
+                            <div class="footertitle">Information</div>
+                            <ul class="quick-links">
+                                <li><a href="Abouts.html">About Us</a></li>
+                                <li><a href="privacy .html">Privacy Policy</a></li>
+                                <li><a href="term.html">Terms &amp; Conditions</a></li>
+
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+
+
+
+
+                        <div class="col-md-3 col-sm-3">
+                            <div class="footertitle">Customer Support</div>
+                            <span><a href="tel:7300457196"><i class="fa fa-phone"></i> Call Us(IN): <strong>+91-7300457196
+                        </strong>,</span>
+                            <span><a href="mailto:services@skyflytechnology.com"><i class="fa fa-envelope"></i> Mail Us: services@skyflytechnology.com </a></span>
+                            <span><a href="#"><i class="fa fa-home"></i> <Address>  Shop No-43 Anand Prime,Haldighati Market ,Tonk Road , Sanganer,Jaipur  Rajasthan (302033)</a></span>
+                        </div>
+
+
+
+
+
+
+                        <div class="col-md-3 col-sm-3">
+                            <div class="footertitle">Stay in Touch!</div>
+                            <p style="padding: 0px;">Follow us on our social networks!</p>
+                            <ul class="social">
+                                <li class="facebook">
+                                    <a href="https://www.facebook.com/profile.php?id=100086543303249&mibextid=ZbWKwL" target="_blank"> <img src="https://www.logo.wine/a/logo/Facebook/Facebook-f_Logo-Blue-Logo.wine.svg" width="60px"> </a>
+                                </li>
+
+
+                                <li class="google-plus">
+                                    <a href="https://instagram.com/skyflytechnology?igshid=MzRlODBiNWFlZA==" target="_blank"> <img src="https://img.freepik.com/free-vector/instagram-icon_1057-2227.jpg?t=st=1682502657~exp=1682503257~hmac=f95042c9bd412a322155c87d3b6059e7168bb6a2dbdb15643c33d326176bbba8" width="60px"></i>
+                                    </a>
+                                </li>
+
+                                <li class="linkedin">
+                                    <a href="#" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/800px-LinkedIn_icon_circle.svg.png" width="60px"></a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+
+                    </div>
+            </footer>
+            </div>
+
+
+            <a href="catebox.html">
+                <div class="chatbox-wrapper">
+                    <div class="chatbox-toggle">
+                        <i class='bx bx-message-dots'></i>
+                    </div>
+                    <script src="app.js"></script>
+            </a>
+
+</body>
+
+</html>
